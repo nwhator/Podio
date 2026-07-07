@@ -10,7 +10,6 @@ import {
   MapPin,
   Menu,
   MessageCircle,
-  Mic2,
   Phone,
   ShieldCheck,
   Sparkles,
@@ -18,6 +17,7 @@ import {
   Users,
   Video,
 } from "lucide-react";
+import Image from "next/image";
 import { ContactForm } from "@/components/podio-forms";
 import {
   coachChecks,
@@ -36,16 +36,23 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-[#f4f7fb] text-[#07101f]">
       <header className="sticky top-0 z-50 border-b border-[#d8e0ea] bg-white/92 backdrop-blur">
-        <nav className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 lg:px-8">
+        <nav className="mx-auto flex max-w-[1280px] items-center justify-between px-5 py-3 lg:px-8">
           <a
             className="group flex items-center gap-3"
             href="#top"
             aria-label="Podio Academy home"
           >
-            <span className="flex h-11 w-11 items-center justify-center rounded-md bg-[#0b4fb3] text-white">
-              <Mic2 aria-hidden className="h-5 w-5" />
+            <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-md bg-[#0b4fb3] text-white">
+              <Image
+                alt=""
+                aria-hidden
+                className="h-full w-full"
+                height={40}
+                src="/podio-icon.svg"
+                width={40}
+              />
             </span>
-            <span className="text-lg font-black uppercase tracking-[0.08em]">
+            <span className="text-base font-black uppercase tracking-[0.08em] sm:text-lg">
               Podio Academy
             </span>
           </a>
@@ -67,14 +74,14 @@ export default function Home() {
             </a>
           </div>
           <a
-            className="hidden h-11 items-center justify-center gap-2 rounded-md bg-[#07101f] px-5 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#0b4fb3] sm:inline-flex"
+            className="hidden h-10 items-center justify-center gap-2 rounded-md bg-[#07101f] px-5 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#0b4fb3] sm:inline-flex"
             href="#contact"
           >
             Book a session
             <ArrowUpRight aria-hidden className="h-4 w-4" />
           </a>
           <a
-            className="flex h-11 w-11 items-center justify-center rounded-md border border-[#cbd6e3] text-[#07101f] lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-md border border-[#cbd6e3] text-[#07101f] lg:hidden"
             href="#footer-links"
             aria-label="Open footer navigation"
           >
@@ -93,8 +100,8 @@ export default function Home() {
           style={{ backgroundImage: `url('${heroImage}')` }}
         />
         <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(7,16,31,0.92),rgba(11,79,179,0.74)_48%,rgba(7,16,31,0.2))]" />
-        <div className="mx-auto grid min-h-[88vh] max-w-[1440px] content-between px-5 py-10 lg:px-8">
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-10">
+        <div className="mx-auto grid min-h-[calc(100svh-65px)] max-w-[1280px] content-between px-5 py-6 lg:min-h-[660px] lg:px-8">
+          <div className="flex flex-wrap items-center justify-between gap-4 pt-4">
             <p className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#eaf4ff]">
               <Sparkles aria-hidden className="h-4 w-4" />
               Online coaching for ages 8-18
@@ -105,15 +112,15 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="py-14 sm:py-20">
-            <h1 className="max-w-6xl text-[clamp(4rem,13vw,11rem)] font-black uppercase leading-[0.86] tracking-[0]">
+          <div className="py-8 sm:py-12">
+            <h1 className="max-w-6xl text-[clamp(3.2rem,10vw,8.6rem)] font-black uppercase leading-[0.88] tracking-[0]">
               Helping Children
               <span className="block text-right text-[#ffbf47]">
                 Find Their Voice
               </span>
             </h1>
-            <div className="mt-10 grid gap-6 lg:grid-cols-[0.65fr_0.35fr] lg:items-end">
-              <p className="max-w-3xl text-xl font-medium leading-8 text-[#edf5ff] sm:text-2xl">
+            <div className="mt-7 grid gap-5 lg:grid-cols-[0.65fr_0.35fr] lg:items-end">
+              <p className="max-w-3xl text-lg font-medium leading-7 text-[#edf5ff] sm:text-xl">
                 Podio Academy helps children become confident communicators,
                 courageous thinkers, and future leaders through live coaching
                 in a warm, structured online environment.
@@ -136,15 +143,15 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid gap-4 border-t border-white/22 py-6 sm:grid-cols-3">
+          <div className="grid gap-4 border-t border-white/22 py-4 sm:grid-cols-3">
             {[
               ["12", "weeks per programme"],
               ["6-8", "children per small group"],
               ["UK", "live online academy"],
             ].map(([stat, label]) => (
               <div key={label}>
-                <p className="text-4xl font-black text-[#ffbf47]">{stat}</p>
-                <p className="mt-1 text-sm font-bold uppercase tracking-[0.12em] text-[#d8e8ff]">
+                <p className="text-3xl font-black text-[#ffbf47]">{stat}</p>
+                <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-[#d8e8ff]">
                   {label}
                 </p>
               </div>
@@ -153,9 +160,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about" className="overflow-hidden bg-white py-24">
-        <div className="mx-auto grid max-w-[1440px] gap-12 px-5 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <div className="relative min-h-[440px] overflow-hidden rounded-md bg-[#07101f]">
+      <section id="about" className="overflow-hidden bg-white py-16 lg:py-20">
+        <div className="mx-auto grid max-w-[1280px] gap-10 px-5 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
+          <div className="relative min-h-[320px] overflow-hidden rounded-md bg-[#07101f] lg:min-h-[400px]">
             <div
               aria-hidden
               className="absolute inset-0 bg-cover bg-center"
@@ -172,15 +179,15 @@ export default function Home() {
           </div>
           <div className="flex flex-col justify-center">
             <SectionKicker>About the academy</SectionKicker>
-            <h2 className="mt-4 text-5xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-6xl">
+            <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-5xl">
               Helping children find their voice before fear finds them.
             </h2>
-            <p className="mt-8 text-lg leading-8 text-[#526274]">
+            <p className="mt-6 text-base leading-7 text-[#526274] sm:text-lg">
               Many adults struggle with confidence and communication because
               these skills were never intentionally developed during childhood.
               Podio Academy exists to change that story.
             </p>
-            <div className="mt-10 grid gap-4 sm:grid-cols-2">
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <InfoPanel
                 icon={Target}
                 title="Our Mission"
@@ -196,29 +203,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="programmes" className="bg-[#07101f] py-24 text-white">
-        <div className="mx-auto max-w-[1440px] px-5 lg:px-8">
+      <section id="programmes" className="bg-[#07101f] py-16 text-white lg:py-20">
+        <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
               <SectionKicker tone="dark">What makes us different</SectionKicker>
-              <h2 className="mt-4 text-5xl font-black uppercase leading-[0.95] tracking-[0] sm:text-6xl">
+              <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] sm:text-5xl">
                 A complete communication ecosystem.
               </h2>
             </div>
-            <p className="max-w-2xl text-lg leading-8 text-[#d9e8f8] lg:ml-auto">
+            <p className="max-w-2xl text-base leading-7 text-[#d9e8f8] sm:text-lg lg:ml-auto">
               Every session is built around practical speaking, supportive
               feedback, and repeatable confidence habits children can use at
               school, at home, and in future opportunities.
             </p>
           </div>
-          <div className="mt-14 grid gap-px overflow-hidden rounded-md border border-white/14 bg-white/14 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-px overflow-hidden rounded-md border border-white/14 bg-white/14 sm:grid-cols-2 lg:grid-cols-3">
             {features.map((feature, index) => {
               const Icon = featureIcons[index] ?? Sparkles;
 
               return (
-                <div className="bg-[#07101f] p-7" key={feature}>
+                <div className="bg-[#07101f] p-6" key={feature}>
                   <Icon aria-hidden className="h-8 w-8 text-[#ffbf47]" />
-                  <h3 className="mt-8 text-2xl font-black">{feature}</h3>
+                  <h3 className="mt-6 text-xl font-black">{feature}</h3>
                 </div>
               );
             })}
@@ -226,21 +233,21 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#eaf2fb] py-24">
-        <div className="mx-auto grid max-w-[1440px] gap-12 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
+      <section className="bg-[#eaf2fb] py-16 lg:py-20">
+        <div className="mx-auto grid max-w-[1280px] gap-10 px-5 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <div>
             <SectionKicker>Meet your coach</SectionKicker>
-            <h2 className="mt-4 text-5xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-6xl">
+            <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-5xl">
               Trained, checked, and child-focused.
             </h2>
           </div>
           <div>
-            <p className="text-lg leading-8 text-[#526274]">
+            <p className="text-base leading-7 text-[#526274] sm:text-lg">
               Every Podio Academy coach is a trained communication specialist
               with safeguarding certification and a passion for helping children
               thrive.
             </p>
-            <div className="mt-10 grid gap-3 sm:grid-cols-2">
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
               {coachChecks.map((item) => (
                 <div
                   className="flex min-h-20 items-start gap-4 rounded-md border border-[#cdd9e7] bg-white p-5"
@@ -259,42 +266,42 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="pricing" className="bg-white py-24">
-        <div className="mx-auto max-w-[1440px] px-5 lg:px-8">
+      <section id="pricing" className="bg-white py-16 lg:py-20">
+        <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
               <SectionKicker>Podio pricing</SectionKicker>
-              <h2 className="mt-4 text-5xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-6xl">
+              <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-5xl">
                 Find the perfect Podio programme for your child.
               </h2>
             </div>
-            <p className="max-w-2xl text-lg leading-8 text-[#526274] lg:ml-auto">
+            <p className="max-w-2xl text-base leading-7 text-[#526274] sm:text-lg lg:ml-auto">
               Every child has a unique voice. Whether they are taking their
               first steps toward confidence or preparing to become a future
               leader, Podio Academy has a programme designed to help them grow.
             </p>
           </div>
 
-          <div className="mt-14 grid gap-5 lg:grid-cols-3">
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
             {programmes.map((programme, index) => (
               <article
                 className={
                   index === 1
-                    ? "rounded-md border-2 border-[#0b4fb3] bg-[#f7fbff] p-7 shadow-[0_24px_60px_rgba(11,79,179,0.16)]"
-                    : "rounded-md border border-[#d8e0ea] bg-white p-7"
+                    ? "rounded-md border-2 border-[#0b4fb3] bg-[#f7fbff] p-6 shadow-[0_24px_60px_rgba(11,79,179,0.16)]"
+                    : "rounded-md border border-[#d8e0ea] bg-white p-6"
                 }
                 key={programme.name}
               >
                 <p className="text-xs font-black uppercase tracking-[0.16em] text-[#0b4fb3]">
                   {programme.eyebrow}
                 </p>
-                <h3 className="mt-5 text-4xl font-black uppercase leading-none tracking-[0] text-[#07101f]">
+                <h3 className="mt-4 text-3xl font-black uppercase leading-none tracking-[0] text-[#07101f]">
                   {programme.name}
                 </h3>
-                <p className="mt-6 min-h-40 leading-7 text-[#526274]">
+                <p className="mt-5 leading-7 text-[#526274] lg:min-h-40">
                   {programme.description}
                 </p>
-                <dl className="mt-8 space-y-4 border-y border-[#d8e0ea] py-6">
+                <dl className="mt-6 space-y-3 border-y border-[#d8e0ea] py-5">
                   <PriceLine label="Duration" value={programme.duration} />
                   <PriceLine label="Pay in full" value={programme.fullPrice} />
                   <PriceLine
@@ -325,23 +332,23 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="faq" className="bg-[#f4f7fb] py-24">
-        <div className="mx-auto grid max-w-[1440px] gap-10 px-5 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
+      <section id="faq" className="bg-[#f4f7fb] py-16 lg:py-20">
+        <div className="mx-auto grid max-w-[1280px] gap-10 px-5 lg:grid-cols-[0.75fr_1.25fr] lg:px-8">
           <div>
             <SectionKicker>FAQ</SectionKicker>
-            <h2 className="mt-4 text-5xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-6xl">
+            <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-5xl">
               Questions parents often ask.
             </h2>
           </div>
           <div className="divide-y divide-[#d8e0ea] rounded-md border border-[#d8e0ea] bg-white">
             {faqs.map((faq, index) => (
-              <details className="group p-6" key={faq.question} open={index === 0}>
+              <details className="group p-5 sm:p-6" key={faq.question} open={index === 0}>
                 <summary className="flex cursor-pointer list-none items-start justify-between gap-6">
                   <span>
                     <span className="mb-3 block text-xs font-black uppercase tracking-[0.18em] text-[#0b4fb3]">
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-2xl font-black text-[#07101f]">
+                    <span className="text-xl font-black text-[#07101f] sm:text-2xl">
                       {faq.question}
                     </span>
                   </span>
@@ -357,14 +364,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="bg-white py-24">
-        <div className="mx-auto grid max-w-[1440px] gap-12 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
+      <section id="contact" className="bg-white py-16 lg:py-20">
+        <div className="mx-auto grid max-w-[1280px] gap-10 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
             <SectionKicker>Contact Podio Academy</SectionKicker>
-            <h2 className="mt-4 text-5xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-6xl">
+            <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-5xl">
               Book a discovery session or ask about a programme.
             </h2>
-            <div className="mt-10 grid gap-4">
+            <div className="mt-8 grid gap-4">
               <ContactLine icon={Phone} label="Phone / WhatsApp">
                 +44 7498 502571
               </ContactLine>
@@ -383,29 +390,29 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#07101f] py-24 text-white">
-        <div className="mx-auto max-w-[1440px] px-5 lg:px-8">
+      <section className="bg-[#07101f] py-16 text-white lg:py-20">
+        <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
               <SectionKicker tone="dark">Safety and trust</SectionKicker>
-              <h2 className="mt-4 text-5xl font-black uppercase leading-[0.95] tracking-[0] sm:text-6xl">
+              <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] sm:text-5xl">
                 Safeguarding at Podio Academy.
               </h2>
             </div>
-            <p className="max-w-2xl text-lg leading-8 text-[#d9e8f8] lg:ml-auto">
+            <p className="max-w-2xl text-base leading-7 text-[#d9e8f8] sm:text-lg lg:ml-auto">
               The safety, wellbeing, and dignity of every child is our highest
               priority. A fuller safeguarding policy is available as its own
               page from the footer.
             </p>
           </div>
-          <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {safeguarding.slice(0, 3).map((item) => (
               <div
-                className="rounded-md border border-white/14 bg-white/[0.07] p-7"
+                className="rounded-md border border-white/14 bg-white/[0.07] p-6"
                 key={item.title}
               >
                 <ShieldCheck aria-hidden className="h-8 w-8 text-[#ffbf47]" />
-                <h3 className="mt-8 text-2xl font-black">{item.title}</h3>
+                <h3 className="mt-6 text-xl font-black">{item.title}</h3>
                 <p className="mt-4 leading-7 text-[#d9e8f8]">{item.copy}</p>
               </div>
             ))}
@@ -492,13 +499,13 @@ function ContactLine({
 function Footer() {
   return (
     <footer className="bg-[#eaf2fb]">
-      <div className="mx-auto max-w-[1440px] px-5 py-20 lg:px-8">
+      <div className="mx-auto max-w-[1280px] px-5 py-14 lg:px-8 lg:py-16">
         <div className="grid gap-10 lg:grid-cols-[1fr_0.8fr] lg:items-end">
           <div>
             <p className="text-xs font-black uppercase tracking-[0.18em] text-[#0b4fb3]">
               Ready to start?
             </p>
-            <h2 className="mt-4 max-w-4xl text-5xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-6xl">
+            <h2 className="mt-4 max-w-4xl text-4xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-5xl">
               Let's help your child speak with confidence.
             </h2>
           </div>
@@ -515,7 +522,7 @@ function Footer() {
 
         <div
           id="footer-links"
-          className="mt-16 grid gap-8 border-t border-[#cbd6e3] pt-10 md:grid-cols-3"
+          className="mt-12 grid gap-8 border-t border-[#cbd6e3] pt-8 md:grid-cols-3"
         >
           <div>
             <p className="text-xl font-black uppercase tracking-[0.08em]">
@@ -550,7 +557,7 @@ function Footer() {
         </div>
       </div>
       <div className="border-t border-[#cbd6e3] px-5 py-6 text-sm font-semibold text-[#526274] lg:px-8">
-        <div className="mx-auto flex max-w-[1440px] flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex max-w-[1280px] flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright © {new Date().getFullYear()} Podio Academy.</p>
           <p>Online - United Kingdom | +44 7498 502571</p>
         </div>

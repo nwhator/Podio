@@ -13,9 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Podio Academy - Helping Children Find Their Voice",
+  title: "Podio",
   description:
     "Live online communication, confidence, and public speaking coaching for children aged 8-18 in the UK.",
+  icons: {
+    icon: "/podio-icon.svg",
+  },
 };
 
 export default function RootLayout({
