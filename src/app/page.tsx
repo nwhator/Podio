@@ -40,7 +40,7 @@ export default function Home() {
           <a
             className="group flex items-center gap-3"
             href="#top"
-            aria-label="Podio Academy home"
+            aria-label="Podio home"
           >
             <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-md bg-[#0b4fb3] text-white">
               <Image
@@ -53,7 +53,7 @@ export default function Home() {
               />
             </span>
             <span className="text-base font-black uppercase tracking-[0.08em] sm:text-lg">
-              Podio Academy
+              Podio
             </span>
           </a>
           <div className="hidden items-center gap-8 text-xs font-black uppercase tracking-[0.16em] text-[#526274] lg:flex">
@@ -74,7 +74,7 @@ export default function Home() {
             </a>
           </div>
           <a
-            className="hidden h-10 items-center justify-center gap-2 rounded-md bg-[#07101f] px-5 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#0b4fb3] sm:inline-flex"
+            className="hidden h-10 items-center justify-center gap-2 rounded-md bg-[#0b4fb3] px-5 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#083f8f] sm:inline-flex"
             href="#contact"
           >
             Book a session
@@ -96,32 +96,32 @@ export default function Home() {
       >
         <div
           aria-hidden
-          className="absolute inset-0 -z-10 bg-cover bg-center opacity-36"
+          className="absolute inset-0 -z-10 bg-cover bg-center opacity-65"
           style={{ backgroundImage: `url('${heroImage}')` }}
         />
-        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(7,16,31,0.92),rgba(11,79,179,0.74)_48%,rgba(7,16,31,0.2))]" />
-        <div className="mx-auto grid min-h-[calc(100svh-65px)] max-w-[1280px] content-between px-5 py-6 lg:min-h-[660px] lg:px-8">
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-4">
-            <p className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/10 px-4 py-2 text-xs font-black uppercase tracking-[0.16em] text-[#eaf4ff]">
+        <div className="absolute inset-0 -z-10 bg-[linear-gradient(90deg,rgba(11,79,179,0.72),rgba(11,79,179,0.46)_50%,rgba(11,79,179,0.12))]" />
+        <div className="mx-auto grid min-h-[calc(100svh-65px)] max-w-[1280px] content-between px-5 py-4 lg:h-[calc(100svh-65px)] lg:max-h-[620px] lg:min-h-[520px] lg:px-8">
+          <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
+            <p className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/14 px-3 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#eaf4ff]">
               <Sparkles aria-hidden className="h-4 w-4" />
               Online coaching for ages 8-18
             </p>
-            <p className="max-w-sm text-sm font-semibold leading-6 text-[#d8e8ff]">
+            <p className="hidden max-w-sm text-sm font-semibold leading-6 text-[#eaf4ff] md:block">
               Communication, confidence, storytelling, public speaking, and
               leadership for growing voices.
             </p>
           </div>
 
-          <div className="py-8 sm:py-12">
-            <h1 className="max-w-6xl text-[clamp(3.2rem,10vw,8.6rem)] font-black uppercase leading-[0.88] tracking-[0]">
+          <div className="py-6 sm:py-8">
+            <h1 className="max-w-6xl text-[clamp(2.8rem,8.6vw,7.2rem)] font-black uppercase leading-[0.9] tracking-[0]">
               Helping Children
               <span className="block text-right text-[#ffbf47]">
                 Find Their Voice
               </span>
             </h1>
-            <div className="mt-7 grid gap-5 lg:grid-cols-[0.65fr_0.35fr] lg:items-end">
-              <p className="max-w-3xl text-lg font-medium leading-7 text-[#edf5ff] sm:text-xl">
-                Podio Academy helps children become confident communicators,
+            <div className="mt-5 grid gap-4 lg:grid-cols-[0.65fr_0.35fr] lg:items-end">
+              <p className="max-w-3xl text-base font-medium leading-7 text-[#edf5ff] sm:text-lg">
+                Podio helps children become confident communicators,
                 courageous thinkers, and future leaders through live coaching
                 in a warm, structured online environment.
               </p>
@@ -143,14 +143,14 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="grid gap-4 border-t border-white/22 py-4 sm:grid-cols-3">
+          <div className="grid gap-3 border-t border-white/22 py-3 sm:grid-cols-3">
             {[
               ["12", "weeks per programme"],
               ["6-8", "children per small group"],
               ["UK", "live online academy"],
             ].map(([stat, label]) => (
               <div key={label}>
-                <p className="text-3xl font-black text-[#ffbf47]">{stat}</p>
+                <p className="text-2xl font-black text-[#ffbf47] sm:text-3xl">{stat}</p>
                 <p className="mt-1 text-xs font-bold uppercase tracking-[0.12em] text-[#d8e8ff]">
                   {label}
                 </p>
@@ -162,15 +162,15 @@ export default function Home() {
 
       <section id="about" className="overflow-hidden bg-white py-16 lg:py-20">
         <div className="mx-auto grid max-w-[1280px] gap-10 px-5 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
-          <div className="relative min-h-[320px] overflow-hidden rounded-md bg-[#07101f] lg:min-h-[400px]">
+          <div className="relative min-h-[320px] overflow-hidden rounded-md bg-[#0b4fb3] lg:min-h-[400px]">
             <div
               aria-hidden
               className="absolute inset-0 bg-cover bg-center"
               style={{ backgroundImage: `url('${heroImage}')` }}
             />
-            <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(0deg,rgba(7,16,31,0.9),transparent)] p-6 text-white">
+            <div className="absolute inset-x-0 bottom-0 bg-[linear-gradient(0deg,rgba(11,79,179,0.86),transparent)] p-6 text-white">
               <p className="text-sm font-black uppercase tracking-[0.16em] text-[#ffbf47]">
-                Podio Academy
+                Podio
               </p>
               <p className="mt-2 max-w-md text-2xl font-black">
                 Confidence is taught through practice, not pressure.
@@ -185,7 +185,7 @@ export default function Home() {
             <p className="mt-6 text-base leading-7 text-[#526274] sm:text-lg">
               Many adults struggle with confidence and communication because
               these skills were never intentionally developed during childhood.
-              Podio Academy exists to change that story.
+              Podio exists to change that story.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-2">
               <InfoPanel
@@ -203,7 +203,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="programmes" className="bg-[#07101f] py-16 text-white lg:py-20">
+      <section id="programmes" className="bg-[#0b4fb3] py-16 text-white lg:py-20">
         <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
             <div>
@@ -223,7 +223,7 @@ export default function Home() {
               const Icon = featureIcons[index] ?? Sparkles;
 
               return (
-                <div className="bg-[#07101f] p-6" key={feature}>
+                <div className="bg-[#0b4fb3] p-6" key={feature}>
                   <Icon aria-hidden className="h-8 w-8 text-[#ffbf47]" />
                   <h3 className="mt-6 text-xl font-black">{feature}</h3>
                 </div>
@@ -243,7 +243,7 @@ export default function Home() {
           </div>
           <div>
             <p className="text-base leading-7 text-[#526274] sm:text-lg">
-              Every Podio Academy coach is a trained communication specialist
+              Every Podio coach is a trained communication specialist
               with safeguarding certification and a passion for helping children
               thrive.
             </p>
@@ -278,7 +278,7 @@ export default function Home() {
             <p className="max-w-2xl text-base leading-7 text-[#526274] sm:text-lg lg:ml-auto">
               Every child has a unique voice. Whether they are taking their
               first steps toward confidence or preparing to become a future
-              leader, Podio Academy has a programme designed to help them grow.
+              leader, Podio has a programme designed to help them grow.
             </p>
           </div>
 
@@ -319,7 +319,7 @@ export default function Home() {
                   className={
                     index === 1
                       ? "mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#0b4fb3] px-5 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#083f8f]"
-                      : "mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#07101f] px-5 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#0b4fb3]"
+                      : "mt-8 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#0b4fb3] px-5 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#083f8f]"
                   }
                   href="#contact"
                 >
@@ -367,7 +367,7 @@ export default function Home() {
       <section id="contact" className="bg-white py-16 lg:py-20">
         <div className="mx-auto grid max-w-[1280px] gap-10 px-5 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
-            <SectionKicker>Contact Podio Academy</SectionKicker>
+            <SectionKicker>Contact Podio</SectionKicker>
             <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-5xl">
               Book a discovery session or ask about a programme.
             </h2>
@@ -390,13 +390,13 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-[#07101f] py-16 text-white lg:py-20">
+      <section className="bg-[#0b4fb3] py-16 text-white lg:py-20">
         <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-end">
             <div>
               <SectionKicker tone="dark">Safety and trust</SectionKicker>
               <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] sm:text-5xl">
-                Safeguarding at Podio Academy.
+                Safeguarding at Podio.
               </h2>
             </div>
             <p className="max-w-2xl text-base leading-7 text-[#d9e8f8] sm:text-lg lg:ml-auto">
@@ -511,7 +511,7 @@ function Footer() {
           </div>
           <div className="lg:justify-self-end">
             <a
-              className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[#0b4fb3] px-7 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#07101f]"
+              className="inline-flex h-12 items-center justify-center gap-2 rounded-md bg-[#0b4fb3] px-7 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#083f8f]"
               href="#contact"
             >
               Book free session
@@ -526,7 +526,7 @@ function Footer() {
         >
           <div>
             <p className="text-xl font-black uppercase tracking-[0.08em]">
-              Podio Academy
+              Podio
             </p>
             <p className="mt-3 max-w-sm leading-7 text-[#526274]">
               Helping children find their voice before fear finds them.

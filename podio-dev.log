@@ -9,9 +9,3 @@
 
 ○ Compiling / ...
 ✓ Finished writing to filesystem cache in 15.3s
-✓ Compiled in 4.8s
-✓ Finished writing to filesystem cache in 10.2s
-✓ Compiled in 35.3s
- GET / 200 in 19.6s (next.js: 6.2s, application-code: 13.5s)
-✓ Compiled in 60.1s
-✓ Finished writing to filesystem cache in 20.4s
