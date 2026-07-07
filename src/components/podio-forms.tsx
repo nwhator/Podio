@@ -34,7 +34,7 @@ export function ContactForm() {
     if (response.ok) {
       setState("success");
       form.reset();
-      setMessage("Thank you. Podio will respond within 24 hours.");
+      setMessage("Thank you. Podio Academy will respond within 24 hours.");
       return;
     }
 
@@ -44,7 +44,7 @@ export function ContactForm() {
 
   return (
     <form
-      className="rounded-md border border-[#d9e1ea] bg-[#f7f8fb] p-6"
+      className="rounded-md border border-[#d8e0ea] bg-[#f7fbff] p-6 shadow-[0_24px_60px_rgba(7,16,31,0.08)] sm:p-8"
       onSubmit={onSubmit}
     >
       <div className="grid gap-4 sm:grid-cols-2">
@@ -52,9 +52,9 @@ export function ContactForm() {
         <Field label="Email Address" name="email" required type="email" />
         <Field label="Phone / WhatsApp" name="phone" type="tel" />
         <label className="block">
-          <span className="text-sm font-bold text-[#102033]">I need help with</span>
+          <span className="text-sm font-black text-[#07101f]">I need help with</span>
           <select
-            className="mt-2 h-12 w-full rounded-md border border-[#c8d3df] bg-white px-3 text-sm outline-none focus:border-[#0b4fb3] focus:ring-4 focus:ring-[#d7ecff]"
+            className="mt-2 h-12 w-full rounded-md border border-[#c8d3df] bg-white px-3 text-sm font-semibold outline-none transition focus:border-[#0b4fb3] focus:ring-4 focus:ring-[#d7ecff]"
             name="enquiryType"
             defaultValue="Book a Free Discovery Session"
           >
@@ -66,9 +66,9 @@ export function ContactForm() {
         </label>
       </div>
       <label className="mt-4 block">
-        <span className="text-sm font-bold text-[#102033]">Message</span>
+        <span className="text-sm font-black text-[#07101f]">Message</span>
         <textarea
-          className="mt-2 min-h-32 w-full rounded-md border border-[#c8d3df] bg-white px-3 py-3 text-sm outline-none focus:border-[#0b4fb3] focus:ring-4 focus:ring-[#d7ecff]"
+          className="mt-2 min-h-36 w-full rounded-md border border-[#c8d3df] bg-white px-3 py-3 text-sm font-semibold outline-none transition focus:border-[#0b4fb3] focus:ring-4 focus:ring-[#d7ecff]"
           name="message"
           placeholder="Tell us a little about your child, schedule, or question."
         />
@@ -121,15 +121,15 @@ export function ConsentForm() {
 
   return (
     <form
-      className="rounded-md border border-[#d9e1ea] bg-white p-6 shadow-sm"
+      className="rounded-md border border-[#d8e0ea] bg-white p-6 shadow-[0_24px_60px_rgba(7,16,31,0.08)] sm:p-8"
       onSubmit={onSubmit}
     >
       <div className="grid gap-4 sm:grid-cols-2">
         <Field label="Parent / Guardian Name" name="parentName" required />
         <Field label="Child's Full Name" name="childName" required />
         <Field label="Email Address" name="email" required type="email" />
-        <div className="rounded-md bg-[#f7f8fb] p-4 text-sm font-bold text-[#526274]">
-          Date: <span className="text-[#102033]">{displayDate}</span>
+        <div className="rounded-md border border-[#d8e0ea] bg-[#f7fbff] p-4 text-sm font-bold text-[#526274]">
+          Date: <span className="text-[#07101f]">{displayDate}</span>
         </div>
       </div>
 
@@ -139,7 +139,7 @@ export function ConsentForm() {
         title="General Participation Consent"
       >
         <Checkbox
-          label="I give permission for my child to participate in Podio programmes and activities"
+          label="I give permission for my child to participate in Podio Academy programmes and activities"
           name="generalParticipation"
           required
         />
@@ -160,7 +160,7 @@ export function ConsentForm() {
         title="Photography & Video Consent"
       >
         <Radio
-          label="I consent to my child's image being used for Podio promotional purposes"
+          label="I consent to my child's image being used for Podio Academy promotional purposes"
           name="photoConsent"
           value="yes"
         />
@@ -176,15 +176,15 @@ export function ConsentForm() {
         title="Communication Consent"
       >
         <Checkbox
-          label="I agree to receive Podio updates, programme information, and relevant communications"
+          label="I agree to receive Podio Academy updates, programme information, and relevant communications"
           name="communicationConsent"
         />
       </ConsentBlock>
 
       <label className="mt-6 block">
-        <span className="text-sm font-bold text-[#102033]">Digital Signature *</span>
+        <span className="text-sm font-black text-[#07101f]">Digital Signature *</span>
         <input
-          className="mt-2 h-12 w-full rounded-md border border-[#c8d3df] bg-white px-3 text-sm outline-none focus:border-[#0b4fb3] focus:ring-4 focus:ring-[#d7ecff]"
+          className="mt-2 h-12 w-full rounded-md border border-[#c8d3df] bg-white px-3 text-sm font-semibold outline-none transition focus:border-[#0b4fb3] focus:ring-4 focus:ring-[#d7ecff]"
           name="signature"
           placeholder="Type your full legal name"
           required
@@ -214,12 +214,12 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="text-sm font-bold text-[#102033]">
+        <span className="text-sm font-black text-[#07101f]">
         {label}
         {required ? " *" : ""}
       </span>
       <input
-        className="mt-2 h-12 w-full rounded-md border border-[#c8d3df] bg-white px-3 text-sm outline-none focus:border-[#0b4fb3] focus:ring-4 focus:ring-[#d7ecff]"
+        className="mt-2 h-12 w-full rounded-md border border-[#c8d3df] bg-white px-3 text-sm font-semibold outline-none transition focus:border-[#0b4fb3] focus:ring-4 focus:ring-[#d7ecff]"
         name={name}
         required={required}
         type={type}
@@ -240,8 +240,8 @@ function ConsentBlock({
   required?: boolean;
 }) {
   return (
-    <fieldset className="mt-6 rounded-md border border-[#d9e1ea] p-4">
-      <legend className="px-2 text-sm font-black text-[#102033]">
+    <fieldset className="mt-6 rounded-md border border-[#d8e0ea] bg-[#fbfdff] p-4">
+      <legend className="px-2 text-sm font-black text-[#07101f]">
         {title}
         {required ? " *" : ""}
       </legend>
@@ -261,7 +261,7 @@ function Checkbox({
   required?: boolean;
 }) {
   return (
-    <label className="flex items-start gap-3 text-sm font-semibold leading-6 text-[#102033]">
+    <label className="flex items-start gap-3 text-sm font-semibold leading-6 text-[#07101f]">
       <input
         className="mt-1 h-4 w-4 rounded border-[#9baabd] text-[#0b4fb3]"
         name={name}
@@ -283,7 +283,7 @@ function Radio({
   value: string;
 }) {
   return (
-    <label className="flex items-start gap-3 text-sm font-semibold leading-6 text-[#102033]">
+    <label className="flex items-start gap-3 text-sm font-semibold leading-6 text-[#07101f]">
       <input
         className="mt-1 h-4 w-4 border-[#9baabd] text-[#0b4fb3]"
         name={name}
@@ -304,7 +304,7 @@ function SubmitButton({
 }) {
   return (
     <button
-      className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#0b4fb3] px-5 text-sm font-bold text-white transition hover:bg-[#083f8f] disabled:cursor-not-allowed disabled:opacity-70"
+      className="mt-6 inline-flex h-12 w-full items-center justify-center gap-2 rounded-md bg-[#0b4fb3] px-5 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#083f8f] disabled:cursor-not-allowed disabled:opacity-70"
       disabled={state === "loading"}
       type="submit"
     >
