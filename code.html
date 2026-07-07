@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Podio - Find Your Voice. Lead Your Future.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#0b1c30",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#cbdbf5",
+                    "surface-container": "#e5eeff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#eeefff",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-container-low": "#eff4ff",
+                    "on-secondary-fixed-variant": "#005048",
+                    "secondary-fixed": "#71f8e4",
+                    "surface-tint": "#0053db",
+                    "primary-fixed": "#dbe1ff",
+                    "on-surface-variant": "#434655",
+                    "tertiary-fixed-dim": "#ffb95f",
+                    "tertiary": "#784b00",
+                    "on-tertiary-fixed-variant": "#653e00",
+                    "inverse-surface": "#213145",
+                    "surface-container-high": "#dce9ff",
+                    "tertiary-container": "#996100",
+                    "outline-variant": "#c3c6d7",
+                    "surface-bright": "#f8f9ff",
+                    "on-tertiary-container": "#ffeedd",
+                    "on-primary-fixed": "#00174b",
+                    "primary-fixed-dim": "#b4c5ff",
+                    "on-surface": "#0b1c30",
+                    "on-secondary-fixed": "#00201c",
+                    "tertiary-fixed": "#ffddb8",
+                    "surface-container-lowest": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#4fdbc8",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "on-error": "#ffffff",
+                    "secondary": "#006b5f",
+                    "on-tertiary-fixed": "#2a1700",
+                    "surface": "#f8f9ff",
+                    "primary": "#004ac6",
+                    "surface-variant": "#d3e4fe",
+                    "surface-container-highest": "#d3e4fe",
+                    "outline": "#737686",
+                    "on-secondary-container": "#006f64",
+                    "primary-container": "#2563eb",
+                    "on-secondary": "#ffffff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "secondary-container": "#6df5e1",
+                    "background": "#f8f9ff",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "lg": "40px",
+                    "sm": "12px",
+                    "md": "24px",
+                    "xl": "64px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "48px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Plus Jakarta Sans"],
+                    "headline-lg-mobile": ["Plus Jakarta Sans"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "headline-lg": ["Plus Jakarta Sans"],
+                    "display-lg": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.4", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md full-width top-0 sticky z-50 shadow-sm transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-7xl mx-auto h-20">
+<!-- Brand Logo -->
+<a class="text-headline-md font-display-lg font-extrabold text-primary dark:text-inverse-primary hover:opacity-80 transition-opacity" href="#">
+                Podio
+            </a>
+<!-- Desktop Navigation Links -->
+<div class="hidden md:flex items-center space-x-lg font-label-md text-label-md">
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 py-2" href="#about">About</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 py-2" href="#programmes">Programmes</a>
+<a class="text-on-surface-variant dark:text-outline-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-200 py-2" href="#pricing">Pricing</a>
+</div>
+<!-- Trailing Action / Mobile Menu Toggle -->
+<div class="flex items-center space-x-md">
+<a class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-primary-fixed-variant hover:shadow-md transition-all shadow-[0_2px_0_0_rgba(0,23,75,0.2)] active:translate-y-px active:shadow-none hover:scale-105 duration-200" href="#pricing">
+                    Enrol Now
+                </a>
+<!-- Mobile Menu Button -->
+<button class="md:hidden text-on-surface p-2 rounded-full hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-xl pb-24 lg:pt-32 lg:pb-40 overflow-hidden bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div class="flex flex-col items-start text-left max-w-2xl">
+<div class="inline-flex items-center gap-xs px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-lg shadow-sm">
+<span class="material-symbols-outlined text-[16px]">campaign</span>
+                            Empowering Young Voices
+                        </div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-md">
+                            Find the Perfect <span class="text-primary">Podio</span> Programme for Your Child
+                        </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-xl leading-relaxed">
+                            Every child has a unique voice. Whether they're taking their first steps toward confidence or preparing to become a future leader, Podio has a programme designed to help them grow.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-md w-full sm:w-auto">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded-full font-label-md text-label-md shadow-[0_2px_0_0_rgba(0,23,75,0.2)] hover:bg-primary-fixed-variant hover:-translate-y-1 hover:shadow-lg transition-all active:translate-y-px active:shadow-none w-full sm:w-auto" href="#pricing">
+                                View Pricing
+                                <span class="material-symbols-outlined ml-2 text-[20px]">arrow_downward</span>
+</a>
+<a class="inline-flex items-center justify-center bg-surface border-2 border-secondary text-secondary px-8 py-4 rounded-full font-label-md text-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all w-full sm:w-auto" href="#programmes">
+                                Explore Programmes
+                            </a>
+</div>
+</div>
+<!-- Hero Image -->
+<div class="relative w-full h-[400px] lg:h-[600px] rounded-[32px] overflow-hidden shadow-xl lg:translate-x-lg">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent mix-blend-overlay z-10 pointer-events-none"></div>
+<img alt="Hero image" class="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700" data-alt="A bright, modern classroom setting where a diverse group of children are sitting around a table with a laptop, smiling and engaging in an interactive learning session. The atmosphere is encouraging and vibrant, reflecting a professional yet playful educational environment typical of Podio." src="https://lh3.googleusercontent.com/aida/AP1WRLueJYxpYHcHmyVFW69n-w3hwjFzEITRCn2No2bEafv0CMWYB0kqFLBmFygDsidSJzZ9asosP83IQoxlWb1MhORTzDhNWxQUPVhWnU29rnrK5lxet7zefjNaCP89XA_zOhXZsSX5jgi0c4ZWmZkwhuhHCY2qUNr28C7411MbBgcnpUoFEWvabpScTD4cayMJdoSYj5RJBtP47XG3bD-2OMvah5YSbCEL7pdZ4lCGThjfP56RMy8HsE5Sa-jc"/>
+</div>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute top-1/4 right-0 w-96 h-96 bg-primary-container/30 rounded-full blur-3xl -z-10 translate-x-1/2"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary-container/40 rounded-full blur-3xl -z-10 -translate-x-1/2 translate-y-1/2"></div>
+</section>
+<!-- About Section -->
+<section class="py-xl lg:py-32 bg-surface relative overflow-hidden" id="about">
+<div class="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+<svg class="absolute bottom-0 left-0 w-full h-64 opacity-[0.05]" preserveaspectratio="none" viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#004ac6"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Our Mission</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Empowering young voices to lead with confidence. Our approach focuses on self-expression, storytelling, and leadership.
+                </p>
+</div>
+</div>
+</section>
+<!-- Programmes Section -->
+<section class="py-xl lg:py-32 bg-surface-container-low relative overflow-hidden" id="programmes">
+<div class="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+<svg class="absolute top-0 left-0 w-full h-64 opacity-[0.05] rotate-180" preserveaspectratio="none" viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,160L48,176C96,192,192,224,288,224C384,224,480,192,576,165.3C672,139,768,117,864,128C960,139,1056,181,1152,197.3C1248,213,1344,203,1392,197.3L1440,192L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z" fill="#006b5f"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="text-center max-w-3xl mx-auto mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Core Tracks</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">A structured journey to confident communication.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md lg:gap-lg">
+<!-- Track 1 -->
+<div class="bg-surface rounded-3xl p-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all text-center border-t-4 border-t-primary relative overflow-hidden">
+<div class="inline-flex items-center justify-center bg-primary-container text-on-primary-container p-4 rounded-full mb-md">
+<span class="material-symbols-outlined text-[32px]">explore</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Voice Explorers</h3>
+<span class="inline-block px-3 py-1 bg-surface-variant text-on-surface-variant font-label-sm text-label-sm rounded-full mb-md">Foundation</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Building the foundational skills for clear expression and self-confidence.</p>
+</div>
+<!-- Track 2 -->
+<div class="bg-surface rounded-3xl p-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all text-center border-t-4 border-t-primary relative overflow-hidden">
+<div class="inline-flex items-center justify-center bg-primary-container text-on-primary-container p-4 rounded-full mb-md">
+<span class="material-symbols-outlined text-[32px]">build</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Voice Builders</h3>
+<span class="inline-block px-3 py-1 bg-surface-variant text-on-surface-variant font-label-sm text-label-sm rounded-full mb-md">Development</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Developing storytelling techniques, presentation skills, and creating impact.</p>
+</div>
+<!-- Track 3 -->
+<div class="bg-surface rounded-3xl p-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all text-center border-t-4 border-t-primary relative overflow-hidden">
+<div class="inline-flex items-center justify-center bg-primary-container text-on-primary-container p-4 rounded-full mb-md">
+<span class="material-symbols-outlined text-[32px]">military_tech</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Voice Leaders</h3>
+<span class="inline-block px-3 py-1 bg-surface-variant text-on-surface-variant font-label-sm text-label-sm rounded-full mb-md">Mastery</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Mastering advanced debates, interviews, and leadership communication.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-xl lg:py-32 bg-surface relative" id="pricing"><div class="absolute inset-0 pointer-events-none overflow-hidden -z-10">
+<svg class="absolute bottom-0 left-0 w-full h-96 opacity-[0.03]" preserveaspectratio="none" viewbox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,224L60,213.3C120,203,240,181,360,186.7C480,192,600,224,720,218.7C840,213,960,171,1080,149.3C1200,128,1320,128,1380,128L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z" fill="#004ac6"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center max-w-3xl mx-auto mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Podio Pricing</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Simple, transparent pricing for programmes that deliver lasting confidence.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md lg:gap-lg items-end">
+<!-- Card 1: Voice Explorers -->
+<div class="bg-surface border-0 rounded-[2rem] p-md lg:p-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col h-full relative overflow-hidden group border-t-8 border-t-primary">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[64px] text-primary">record_voice_over</span>
+</div>
+<div class="mb-lg mt-sm">
+<span class="inline-block px-3 py-1 bg-surface-variant text-on-surface-variant font-label-sm text-label-sm rounded-full mb-md">Ages 8–15</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Voice Explorers</h3>
+<p class="font-body-md text-body-md text-on-surface-variant h-16">For children discovering their confidence.</p>
+</div>
+<div class="mb-lg flex-grow">
+<ul class="space-y-sm font-body-md text-body-md text-on-surface">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-2 text-[20px]">check_circle</span>
+                                    12 weeks duration
+                                </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-2 text-[20px]">check_circle</span>
+                                    Confidence building
+                                </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-2 text-[20px]">check_circle</span>
+                                    Clear expression
+                                </li>
+</ul>
+</div>
+<div class="mt-auto pt-md border-t border-outline-variant/30">
+<div class="flex justify-between items-baseline mb-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Pay in Full</span>
+<span class="font-headline-md text-headline-md text-on-surface">£135</span>
+</div>
+<div class="flex justify-between items-baseline mb-md">
+<span class="font-label-md text-label-md text-on-surface-variant">Monthly (3 Months)</span>
+<span class="font-body-lg text-body-lg text-on-surface">£50<span class="text-sm text-on-surface-variant">/mo</span></span>
+</div>
+<button class="w-full bg-surface border-2 border-primary text-primary px-4 py-3 rounded-xl font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors">
+                                Enrol Now
+                            </button>
+</div>
+</div>
+<!-- Card 2: Voice Builders (Most Popular) -->
+<div class="bg-primary-container text-on-primary-container rounded-[2rem] p-md lg:p-lg shadow-xl hover:-translate-y-2 transition-all flex flex-col h-full relative z-10 border-t-8 border-t-primary-fixed transform md:scale-105">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="bg-tertiary text-on-tertiary px-4 py-1 rounded-full font-label-sm text-label-sm font-bold shadow-md uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">star</span> Most Popular
+                            </span>
+</div>
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[64px] text-on-primary-container">psychology</span>
+</div>
+<div class="mb-lg mt-sm">
+<h3 class="font-headline-md text-headline-md text-on-primary-container mb-sm">Voice Builders</h3>
+<p class="font-body-md text-body-md text-inverse-primary h-16">For children ready to grow their communication skills.</p>
+</div>
+<div class="mb-lg flex-grow">
+<ul class="space-y-sm font-body-md text-body-md">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary-container mr-2 text-[20px]">check_circle</span>
+                                    3 Months duration
+                                </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary-container mr-2 text-[20px]">check_circle</span>
+                                    Storytelling techniques
+                                </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary-container mr-2 text-[20px]">check_circle</span>
+                                    Presentation skills
+                                </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-secondary-container mr-2 text-[20px]">check_circle</span>
+                                    Creating impact
+                                </li>
+</ul>
+</div>
+<div class="mt-auto pt-md border-t border-inverse-primary/30">
+<div class="flex justify-between items-baseline mb-sm">
+<span class="font-label-md text-label-md text-inverse-primary">Pay in Full</span>
+<span class="font-headline-md text-headline-md">£165</span>
+</div>
+<div class="flex justify-between items-baseline mb-md">
+<span class="font-label-md text-label-md text-inverse-primary">Monthly (3 Months)</span>
+<span class="font-body-lg text-body-lg">£60<span class="text-sm opacity-80">/mo</span></span>
+</div>
+<button class="w-full bg-on-primary-container text-primary-container px-4 py-3 rounded-xl font-label-md text-label-md hover:bg-surface shadow-[0_2px_0_0_rgba(0,0,0,0.1)] active:translate-y-px active:shadow-none transition-all font-bold">
+                                Enrol Now
+                            </button>
+</div>
+</div>
+<!-- Card 3: Voice Leaders -->
+<div class="bg-surface border-0 rounded-[2rem] p-md lg:p-lg shadow-lg hover:shadow-xl hover:-translate-y-2 transition-all flex flex-col h-full relative overflow-hidden group border-t-8 border-t-primary">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[64px] text-tertiary">mic_external_on</span>
+</div>
+<div class="mb-lg mt-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Voice Leaders</h3>
+<p class="font-body-md text-body-md text-on-surface-variant h-16">For confident communicators ready to lead.</p>
+</div>
+<div class="mb-lg flex-grow">
+<ul class="space-y-sm font-body-md text-body-md text-on-surface">
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-2 text-[20px]">check_circle</span>
+                                    3 Months duration
+                                </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-2 text-[20px]">check_circle</span>
+                                    Advanced debates
+                                </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-2 text-[20px]">check_circle</span>
+                                    Interview techniques
+                                </li>
+<li class="flex items-start">
+<span class="material-symbols-outlined text-primary mr-2 text-[20px]">check_circle</span>
+                                    Leadership communication
+                                </li>
+</ul>
+</div>
+<div class="mt-auto pt-md border-t border-outline-variant/30">
+<div class="flex justify-between items-baseline mb-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Pay in Full</span>
+<span class="font-headline-md text-headline-md text-on-surface">£195</span>
+</div>
+<div class="flex justify-between items-baseline mb-md">
+<span class="font-label-md text-label-md text-on-surface-variant">Monthly (3 Months)</span>
+<span class="font-body-lg text-body-lg text-on-surface">£70<span class="text-sm text-on-surface-variant">/mo</span></span>
+</div>
+<button class="w-full bg-surface border-2 border-primary text-primary px-4 py-3 rounded-xl font-label-md text-label-md hover:bg-primary-container hover:text-on-primary-container transition-colors">
+                                Enrol Now
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-xl lg:py-32 bg-surface-container-low" id="faq">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-md">Frequently Asked Questions</h2>
+</div>
+<div class="space-y-md">
+<div class="bg-surface rounded-3xl p-md lg:p-8 shadow-md border border-outline-variant/10 hover:shadow-lg transition-shadow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Who are the programmes for?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Ages 8-15.</p>
+</div>
+<div class="bg-surface rounded-3xl p-md lg:p-8 shadow-md border border-outline-variant/10 hover:shadow-lg transition-shadow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">How long are the sessions?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">12-week programmes.</p>
+</div>
+<div class="bg-surface rounded-3xl p-md lg:p-8 shadow-md border border-outline-variant/10 hover:shadow-lg transition-shadow">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-sm">Do I need prior experience?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">No, we have levels for all stages.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface full-width bg-surface-container-highest dark:bg-inverse-surface flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop py-xl max-w-7xl mx-auto">
+<!-- Brand -->
+<div class="col-span-1 md:col-span-1 mb-lg md:mb-0">
+<div class="text-headline-md font-display-lg font-bold text-primary dark:text-primary-fixed-dim mb-4">
+                    Podio
+                </div>
+<p class="font-body-md text-body-md text-on-surface dark:text-inverse-on-surface opacity-80">
+                    Find Your Voice. Lead Your Future.
+                </p>
+</div>
+<!-- Links Group 1 -->
+<div class="col-span-1 md:col-span-1">
+<h4 class="font-label-md text-label-md text-on-surface dark:text-inverse-on-surface font-bold mb-4">Navigation</h4>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant dark:text-outline-variant">
+<li><a class="hover:text-primary dark:hover:text-secondary-fixed transition-colors active:opacity-80" href="#about">About</a></li>
+<li><a class="hover:text-primary dark:hover:text-secondary-fixed transition-colors active:opacity-80" href="#programmes">Programmes</a></li>
+<li><a class="hover:text-primary dark:hover:text-secondary-fixed transition-colors active:opacity-80" href="#pricing">Pricing</a></li>
+</ul>
+</div>
+<!-- Links Group 2 (Contact) -->
+<div class="col-span-1 md:col-span-2">
+<h4 class="font-label-md text-label-md text-on-surface dark:text-inverse-on-surface font-bold mb-4">Contact Us</h4>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant dark:text-outline-variant">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<a class="hover:text-primary dark:hover:text-secondary-fixed transition-colors active:opacity-80" href="mailto:hello@podio.edu">hello@podio.edu</a>
+</li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">phone</span>
+<a class="hover:text-primary dark:hover:text-secondary-fixed transition-colors active:opacity-80" href="tel:+1234567890">+1 234 567 890</a>
+</li>
+</ul>
+</div>
+<div class="col-span-1 md:col-span-4 mt-lg pt-lg border-t border-outline-variant/30 text-center md:text-left">
+<p class="font-label-sm text-label-sm text-on-surface-variant dark:text-outline-variant">
+                    © 2026 Podio. Find Your Voice. Lead Your Future.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>
