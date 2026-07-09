@@ -1,5 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Podio">
-  <rect width="64" height="64" rx="10" fill="#0b4fb3"/>
-  <path fill="#fff" d="M22 13h14c8.4 0 14 5.3 14 13.2 0 8.1-5.8 13.5-14.3 13.5h-5.4V51H22V13Zm13.1 19.3c4.1 0 6.5-2.2 6.5-5.9 0-3.6-2.4-5.8-6.5-5.8h-4.8v11.7h4.8Z"/>
-  <circle cx="45" cy="46" r="5" fill="#ffbf47"/>
+  <rect width="64" height="64" rx="12" fill="#6B2D8B"/>
+  <g transform="translate(12,12) scale(1.667)" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <path d="m11 7.601-5.994 8.19a1 1 0 0 0 .1 1.298l.817.818a1 1 0 0 0 1.314.087L15.09 12"/>
+    <path d="M16.5 21.174C15.5 20.5 14.372 20 13 20c-2.058 0-3.928 2.356-6 2-2.072-.356-2.775-3.369-1.5-4.5"/>
+    <circle cx="16" cy="7" r="5"/>
+  </g>
+  <circle cx="50" cy="50" r="6" fill="#ffbf47"/>
 </svg>
