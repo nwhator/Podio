@@ -5,6 +5,7 @@ import { ArrowUpRight, Loader2 } from "lucide-react";
 
 interface EnrolButtonProps {
   priceId: string | undefined;
+  envKeyName?: string;
   label?: string;
   /** "primary" = solid purple fill, "secondary" = outlined */
   variant?: "primary" | "secondary";
@@ -12,6 +13,7 @@ interface EnrolButtonProps {
 
 export function EnrolButton({
   priceId,
+  envKeyName,
   label = "Enrol now",
   variant = "primary",
 }: EnrolButtonProps) {
@@ -20,8 +22,11 @@ export function EnrolButton({
 
   async function handleEnrol() {
     if (!priceId) {
+      const configMsg = envKeyName
+        ? ` (Missing environment variable: ${envKeyName})`
+        : "";
       setError(
-        "Online enrolment isn't configured yet. Please contact us at PodioForKids@gmail.com or call +44 7498 502571 to enrol.",
+        `Online enrolment isn't configured yet.${configMsg} Please contact us at PodioForKids@gmail.com or call +44 7498 502571 to enrol.`,
       );
       return;
     }

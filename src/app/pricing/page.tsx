@@ -17,18 +17,18 @@ export const metadata: Metadata = {
  * Map each programme name to its Stripe price ID environment variables.
  * Add the actual price_xxx values to your .env.local file.
  */
-const PRICE_IDS: Record<string, { full: string | undefined; monthly: string | undefined }> = {
+const PRICE_IDS: Record<string, { full: string; monthly: string }> = {
   "Voice Explorers": {
-    full: process.env.STRIPE_PRICE_VOICE_EXPLORERS_FULL,
-    monthly: process.env.STRIPE_PRICE_VOICE_EXPLORERS_MONTHLY,
+    full: process.env.STRIPE_PRICE_VOICE_EXPLORERS_FULL || "price_1TpaRmQ3GhEHrM2K9DkLKzoH",
+    monthly: process.env.STRIPE_PRICE_VOICE_EXPLORERS_MONTHLY || "price_1TpaRmQ3GhEHrM2KxfrDMyeo",
   },
   "Voice Builders": {
-    full: process.env.STRIPE_PRICE_VOICE_BUILDERS_FULL,
-    monthly: process.env.STRIPE_PRICE_VOICE_BUILDERS_MONTHLY,
+    full: process.env.STRIPE_PRICE_VOICE_BUILDERS_FULL || "price_1TpaoJQ3GhEHrM2KwEEmFzGm",
+    monthly: process.env.STRIPE_PRICE_VOICE_BUILDERS_MONTHLY || "price_1TpaoJQ3GhEHrM2KWFmRjAZB",
   },
   "Voice Leaders": {
-    full: process.env.STRIPE_PRICE_VOICE_LEADERS_FULL,
-    monthly: process.env.STRIPE_PRICE_VOICE_LEADERS_MONTHLY,
+    full: process.env.STRIPE_PRICE_VOICE_LEADERS_FULL || "price_1TpaqUQ3GhEHrM2KzfYfSnCD",
+    monthly: process.env.STRIPE_PRICE_VOICE_LEADERS_MONTHLY || "price_1TpaqUQ3GhEHrM2KuRl4XhkR",
   },
 };
 
@@ -103,11 +103,25 @@ export default function PricingPage() {
                     <div className="mt-6 flex flex-col gap-3">
                       <EnrolButton
                         priceId={prices?.full}
+                        envKeyName={
+                          programme.name === "Voice Explorers"
+                            ? "STRIPE_PRICE_VOICE_EXPLORERS_FULL"
+                            : programme.name === "Voice Builders"
+                            ? "STRIPE_PRICE_VOICE_BUILDERS_FULL"
+                            : "STRIPE_PRICE_VOICE_LEADERS_FULL"
+                        }
                         label={`Enrol now — Pay in full (${programme.fullPrice})`}
                         variant="primary"
                       />
                       <EnrolButton
                         priceId={prices?.monthly}
+                        envKeyName={
+                          programme.name === "Voice Explorers"
+                            ? "STRIPE_PRICE_VOICE_EXPLORERS_MONTHLY"
+                            : programme.name === "Voice Builders"
+                            ? "STRIPE_PRICE_VOICE_BUILDERS_MONTHLY"
+                            : "STRIPE_PRICE_VOICE_LEADERS_MONTHLY"
+                        }
                         label={`Pay monthly (${programme.monthlyPrice})`}
                         variant="secondary"
                       />
