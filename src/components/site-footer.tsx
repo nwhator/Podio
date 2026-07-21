@@ -69,7 +69,7 @@ export function SiteFooter() {
       <div className="border-t border-[#e5d9f0] px-5 py-6 text-sm font-semibold text-[#526274] lg:px-8">
         <div className="mx-auto flex max-w-[1280px] flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright © {new Date().getFullYear()} Podio.</p>
-          <p>Online — United Kingdom | +44 7498 502571</p>
+          <p>Online — United Kingdom | <a href="tel:+447498502571" className="underline decoration-[#c4a8d9] underline-offset-2 transition hover:text-[#6B2D8B] hover:decoration-[#6B2D8B]">+44 7498 502571</a></p>
         </div>
       </div>
     </footer>
