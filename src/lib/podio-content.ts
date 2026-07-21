@@ -24,8 +24,7 @@ export const programmes = [
     duration: "3 Months",
     fullPrice: "£135",
     monthlyPrice: "£50 per month",
-    bestFor:
-      "Ages 8-15 who are just starting their communication journey.",
+    bestFor: "Kids who are just starting their communication journey.",
   },
   {
     name: "Voice Builders",
