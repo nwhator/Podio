@@ -16,11 +16,49 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Podio | Helping Children Find Their Voice",
+  title: {
+    default: "Podio | Helping Children Find Their Voice",
+    template: "%s | Podio",
+  },
   description:
     "Live online communication, confidence, and public speaking coaching for children aged 8-18 in the UK.",
   icons: {
     icon: "/podio-icon.svg",
+    apple: "/podio-icon.svg",
+  },
+  openGraph: {
+    title: "Podio | Helping Children Find Their Voice",
+    description:
+      "Live online communication, confidence, and public speaking coaching for children aged 8-18 in the UK.",
+    url: "https://podioforkids.com",
+    siteName: "Podio",
+    images: [
+      {
+        url: "https://media.base44.com/images/public/6a213dc397307c380a637125/812a0c1d8_generated_image.png",
+        width: 1200,
+        height: 630,
+        alt: "Podio – Helping Children Find Their Voice",
+      },
+    ],
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Podio | Helping Children Find Their Voice",
+    description:
+      "Live online communication, confidence, and public speaking coaching for children aged 8-18 in the UK.",
+    images: [
+      "https://media.base44.com/images/public/6a213dc397307c380a637125/812a0c1d8_generated_image.png",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  metadataBase: new URL("https://podioforkids.com"),
+  alternates: {
+    canonical: "https://podioforkids.com",
   },
 };
 
