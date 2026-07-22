@@ -48,9 +48,9 @@ export default function BooksPage() {
                         <h2 className="text-2xl font-black uppercase leading-[1.1] tracking-[-0.01em] text-[#07101f]">
                           {book.name}
                         </h2>
-                        <p className="mt-1 text-sm font-bold text-[#6B2D8B]">
-                          Ages {book.ageRange}
-                        </p>
+<p className="mt-1 text-sm font-bold text-[#6B2D8B]">
+      All ages
+    </p>
                       </div>
                       <span className="shrink-0 rounded-lg bg-[#f5edfb] px-3 py-1.5 text-lg font-black text-[#6B2D8B]">
                         {book.price}
