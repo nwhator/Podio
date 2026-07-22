@@ -13,7 +13,7 @@ export function PageHero({
         <p className="text-xs font-black uppercase tracking-[0.18em] text-[#ffbf47]">
           {kicker}
         </p>
-        <h1 className="mt-5 max-w-4xl text-5xl font-black uppercase leading-[0.92] tracking-[-0.01em] sm:text-7xl">
+        <h1 className="mt-5 max-w-4xl text-3xl font-black uppercase leading-[0.92] tracking-[-0.01em] sm:text-4xl md:text-5xl">
           {heading}
         </h1>
         {subtitle && (
