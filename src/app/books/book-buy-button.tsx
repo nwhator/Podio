@@ -43,14 +43,14 @@ export function BookBuyButton({ priceId, label }: BookBuyButtonProps) {
       <button
         onClick={handleBuy}
         disabled={loading}
-        className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-[#6B2D8B] px-6 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#4e1f68] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+        className="inline-flex h-9 w-full items-center justify-center gap-2 rounded-md bg-[#6B2D8B] px-5 text-xs font-black uppercase tracking-[0.12em] text-white transition hover:bg-[#4e1f68] disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
       >
         {loading ? (
           <Loader2 aria-hidden className="h-4 w-4 animate-spin" />
         ) : (
-          <ShoppingBag aria-hidden className="h-4 w-4" />
+          <ShoppingBag aria-hidden className="h-3.5 w-3.5" />
         )}
-        {loading ? "Redirecting to checkout…" : label}
+        <span className="ml-1">BUY NOW</span>
       </button>
       {error && (
         <p className="mt-3 rounded-lg bg-[#ffe8e8] p-3 text-sm font-semibold text-[#9a1b1b]">
