@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { BookOpen } from "lucide-react";
+import Image from "next/image";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { PageHero } from "@/components/page-hero";
+import { BookBuyButton } from "./book-buy-button";
+import { books } from "@/lib/podio-content";
 
 export const metadata: Metadata = {
   title: "Books | Podio",
   description:
-    "Podio's children's book library — coming soon. Stories that build confidence, communication skills, and a love for reading.",
+    "Podio's book collection — My Voice Is A Superpower and My Voice Is A Superpower: Teen Edition. Build confidence and communication skills through stories.",
 };
 
 export default function BooksPage() {
@@ -14,114 +17,65 @@ export default function BooksPage() {
     <>
       <SiteHeader />
       <main className="min-h-screen bg-[#faf7fc] text-[#07101f]">
-        <section className="relative isolate flex min-h-[calc(100vh-65px)] items-center justify-center overflow-hidden bg-[#3d1158] px-5">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,#6B2D8B_0%,#3d1158_70%)]" />
-
-          {/* floating book icons */}
-          <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-            {[...Array(6)].map((_, i) => (
-              <BookOpen
-                key={i}
-                className="absolute text-white/6"
-                style={{
-                  width: 40 + i * 20,
-                  height: 40 + i * 20,
-                  top: `${15 + i * 14}%`,
-                  left: `${8 + i * 16}%`,
-                  animation: `float ${4 + i * 1.5}s ease-in-out infinite`,
-                  animationDelay: `${i * 0.6}s`,
-                }}
-              />
-            ))}
-          </div>
-
-          <div className="relative z-10 mx-auto max-w-3xl text-center">
-            <div
-              className="mx-auto flex h-20 w-20 animate-pulse items-center justify-center rounded-2xl bg-[#ffbf47] shadow-lg"
-              style={{ animationDuration: "2s" }}
-            >
-              <BookOpen className="h-10 w-10 text-[#3d1158]" />
-            </div>
-
-            <h1 className="mt-8 text-[clamp(2.5rem,7vw,5rem)] font-black uppercase leading-[0.92] tracking-[-0.01em] text-white">
-              Children&apos;s
-              <span className="block text-[#ffbf47]">Book Library</span>
-            </h1>
-
-            <div className="mt-6">
-              <span className="inline-flex animate-pulse items-center gap-3 rounded-full border border-[#ffbf47]/40 bg-[#ffbf47]/10 px-6 py-3">
-                <span className="relative flex h-3 w-3">
-                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#ffbf47] opacity-75" />
-                  <span className="relative inline-flex h-3 w-3 rounded-full bg-[#ffbf47]" />
-                </span>
-                <span className="text-sm font-black uppercase tracking-[0.16em] text-[#ffbf47]">
-                  Coming Soon
-                </span>
-              </span>
-            </div>
-
-            <p className="mx-auto mt-8 max-w-xl text-lg leading-7 text-[#e8d4f5] sm:text-xl">
-              Stories that help children find their voice, build confidence, and
-              fall in love with reading. Our book library is being curated with
-              care — and it&apos;ll be here before you know it.
-            </p>
-
-            <div className="mt-4 flex items-center justify-center gap-3 text-sm text-[#c4a8d9]">
-              <span className="h-1 w-1 rounded-full bg-[#c4a8d9]" />
-              <span>Sign up to be notified when we launch</span>
-              <span className="h-1 w-1 rounded-full bg-[#c4a8d9]" />
-            </div>
-          </div>
-        </section>
+        <PageHero
+          kicker="Podio books"
+          heading="Find your voice on every page."
+          subtitle="Our books and companion workbooks help children and teens build confidence, express ideas clearly, and develop strong communication skills — all through the power of storytelling."
+        />
 
         <section className="bg-white py-16 lg:py-20">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
-            <div className="grid gap-8 lg:grid-cols-3">
-              {[
-                {
-                  title: "Confidence Stories",
-                  desc: "Tales of courage, self-belief, and finding your voice — written to inspire young readers.",
-                  color: "bg-[#6B2D8B]",
-                },
-                {
-                  title: "Activity Books",
-                  desc: "Fun exercises, journal prompts, and speaking challenges that make building confidence a daily habit.",
-                  color: "bg-[#ffbf47]",
-                },
-                {
-                  title: "Parent Guides",
-                  desc: "Practical resources for parents who want to support their child's communication journey at home.",
-                  color: "bg-[#4e1f68]",
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-xl border border-[#e5d9f0] bg-[#fdf8ff] p-7 opacity-60"
+            <div className="grid gap-10 lg:grid-cols-2">
+              {books.map((book) => (
+                <article
+                  key={book.name}
+                  className="group relative flex flex-col overflow-hidden rounded-2xl border border-[#e5d9f0] bg-[#fdf8ff] shadow-sm transition-shadow duration-300 hover:shadow-xl"
                 >
-                  <div
-                    className={`${item.color} mb-5 h-2 w-16 rounded-full`}
-                  />
-                  <h3 className="text-xl font-black uppercase tracking-[-0.01em] text-[#07101f]">
-                    {item.title}
-                  </h3>
-                  <p className="mt-3 leading-7 text-[#526274]">{item.desc}</p>
-                  <p className="mt-4 text-xs font-black uppercase tracking-[0.16em] text-[#6B2D8B]">
-                    Coming soon
-                  </p>
-                </div>
+                  <div className="relative aspect-[3/4] overflow-hidden bg-[#f5edfb] sm:aspect-[4/3]">
+                    <Image
+                      src={book.image}
+                      alt={book.name}
+                      fill
+                      className="object-contain p-4 transition-all duration-500 group-hover:scale-110 group-hover:rotate-1"
+                      sizes="(max-width: 768px) 100vw, 50vw"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                  </div>
+
+                  <div className="flex flex-1 flex-col p-6 sm:p-8">
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h2 className="text-2xl font-black uppercase leading-[1.1] tracking-[-0.01em] text-[#07101f]">
+                          {book.name}
+                        </h2>
+                        <p className="mt-1 text-sm font-bold text-[#6B2D8B]">
+                          Ages {book.ageRange}
+                        </p>
+                      </div>
+                      <span className="shrink-0 rounded-lg bg-[#f5edfb] px-3 py-1.5 text-lg font-black text-[#6B2D8B]">
+                        {book.price}
+                      </span>
+                    </div>
+
+                    <p className="mt-4 flex-1 leading-7 text-[#526274]">
+                      {book.description}
+                    </p>
+
+                    <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
+                      <div className="flex-1">
+                        <BookBuyButton priceId={book.stripePriceId} label={`Buy ${book.name}`} />
+                      </div>
+                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-[#6B2D8B]">
+                        Physical copy
+                      </p>
+                    </div>
+                  </div>
+                </article>
               ))}
             </div>
           </div>
         </section>
       </main>
-
-      <style>{`
-        @keyframes float {
-          0%, 100% { transform: translateY(0) rotate(0deg); }
-          50% { transform: translateY(-24px) rotate(8deg); }
-        }
-      `}</style>
-
       <SiteFooter />
     </>
   );
