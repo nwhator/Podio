@@ -172,7 +172,7 @@ export const books: BookProduct[] = [
     stripePriceId: process.env.STRIPE_PRICE_BOOK_SUPERPOWER || "price_1Tw0v8Q3GhEHrM2KtxIIa2AN",
     description:
       "My Voice Is A Superpower is a fun and interactive communication adventure designed to help children build confidence, express their ideas clearly, and develop strong public speaking skills. Through the exciting journey of Leo, Nova, Wizzy and Sparks, children learn storytelling, leadership, critical thinking, and the courage to use their voice. Includes an interactive workbook packed with practical activities, reflection exercises, and speaking challenges to reinforce every lesson.",
-    price: "£20",
+    price: "£25",
     image: "/My_voice_is_a_super_power.jpg",
     type: "physical",
   },
@@ -181,7 +181,7 @@ export const books: BookProduct[] = [
     stripePriceId: process.env.STRIPE_PRICE_BOOK_SUPERPOWER_TEEN || "price_1Tw0yKQ3GhEHrM2KSUGp4IoL",
     description:
       "Designed for teenagers preparing for school, university, and life beyond, My Voice Is A Superpower: Teen Edition equips young people with the confidence to communicate effectively, think critically, and speak with purpose. Through relatable stories, practical lessons, and real-world communication skills, teens learn how to lead conversations, present ideas with confidence, and become impactful communicators. Includes a companion workbook filled with guided exercises, speaking activities, and reflection tasks to help readers put every lesson into practice.",
-    price: "£20",
+    price: "£25",
     image: "/My_voice_is_a_super_power_teen_edition.jpg",
     type: "physical",
   },
