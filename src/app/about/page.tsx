@@ -4,7 +4,8 @@ import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageHero } from "@/components/page-hero";
-import { coachChecks, safeguarding } from "@/lib/podio-content";
+import { FounderPhoto } from "@/components/founder-photo";
+import { coachChecks } from "@/lib/podio-content";
 
 export const metadata: Metadata = {
   title: "About | Podio",
@@ -26,8 +27,79 @@ export default function AboutPage() {
           subtitle="Many adults struggle with confidence and communication because these skills were never intentionally developed during childhood. Podio exists to change that story."
         />
 
+        {/* ── MEET THE FOUNDER ────────────────────────────────── */}
+        <section className="bg-white py-16 lg:py-24 border-b border-[#e5d9f0]">
+          <div className="mx-auto grid max-w-[1280px] gap-12 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:px-8">
+            {/* Interactive Crossfade Founder Photo */}
+            <div className="lg:sticky lg:top-24 flex justify-center">
+              <FounderPhoto />
+            </div>
+
+            {/* Founder Biography & Story */}
+            <div>
+              <p className="text-xs font-black uppercase tracking-[0.18em] text-[#6B2D8B]">
+                Leadership
+              </p>
+              <h2 className="mt-4 text-4xl font-black uppercase leading-[0.95] tracking-[0] text-[#07101f] sm:text-5xl">
+                Meet the Founder
+              </h2>
+
+              <div className="mt-6 space-y-4 text-base leading-7 text-[#526274] sm:text-lg">
+                <p>
+                  <strong className="font-extrabold text-[#07101f]">Goodnews Chukwunyem</strong> is the Founder of Podio, an international speaker, media and communications expert, storyteller and public speaking coach passionate about helping young people find the confidence to express themselves.
+                </p>
+                <p>
+                  With a background in Law and a Master’s degree in Media and Communications from the University of Roehampton, London, Goodnews has built a career around communication, storytelling, digital media and social impact. Her work has taken her to international platforms, including the United Nations World Summit for Social Development in Doha, where she represented Silver Lining for the Needy Initiative.
+                </p>
+              </div>
+
+              {/* Why Podio Sub-Section */}
+              <div className="mt-10 border-t border-[#e5d9f0] pt-8">
+                <h3 className="text-2xl font-black uppercase tracking-[0.02em] text-[#6B2D8B]">
+                  Why Podio?
+                </h3>
+                <div className="mt-4 space-y-4 text-base leading-7 text-[#526274]">
+                  <p>
+                    The idea for Podio came from years of working with both adults and children.
+                  </p>
+                  <p>
+                    In conversations with adults, Goodnews often heard the same thing: their fear of public speaking and difficulty expressing themselves had started when they were children. At the same time, working with children, she saw firsthand how many struggled to put their thoughts, ideas and words together.
+                  </p>
+                  <div className="my-6 rounded-xl border border-[#e5d9f0] bg-[#fdf8ff] p-5 sm:p-6">
+                    <p className="text-lg font-bold leading-snug text-[#07101f] sm:text-xl">
+                      And she began to ask herself: What if we can help children find their voice before fear does?
+                    </p>
+                    <p className="mt-3 text-base leading-relaxed text-[#526274]">
+                      What if children could learn to communicate with confidence early enough, so they grow into adults who are not afraid to speak, share ideas and be heard?
+                    </p>
+                    <p className="mt-4 text-sm font-black uppercase tracking-[0.14em] text-[#6B2D8B]">
+                      That question became Podio.
+                    </p>
+                  </div>
+                  <p>
+                    Through its books, programs, workshops and future digital platform, Podio is helping children build the communication and confidence skills they need for life.
+                  </p>
+                  <p>
+                    Because every adult was once a child. And if we can help children find their voice today, we can help build a generation of confident communicators tomorrow.
+                  </p>
+                </div>
+
+                {/* Quote Callout */}
+                <div className="mt-8 rounded-xl bg-[#6B2D8B] p-6 text-white shadow-md">
+                  <blockquote className="text-xl font-black italic tracking-wide text-[#ffbf47] sm:text-2xl">
+                    “Every child has a voice. Podio exists to help them discover its power.”
+                  </blockquote>
+                  <p className="mt-3 text-xs font-bold uppercase tracking-[0.16em] text-[#f5e8ff]">
+                    — Goodnews Chukwunyem, Founder of Podio
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* ── MISSION & VISION ────────────────────────────────── */}
-        <section className="bg-white py-16 lg:py-20">
+        <section className="bg-[#faf7fc] py-16 lg:py-20">
           <div className="mx-auto grid max-w-[1280px] gap-10 px-5 lg:grid-cols-[0.95fr_1.05fr] lg:px-8">
             <div className="relative min-h-[320px] overflow-hidden rounded-xl bg-[#6B2D8B] lg:min-h-[440px]">
               <div
@@ -86,7 +158,7 @@ export default function AboutPage() {
         </section>
 
         {/* ── THE PODIO APPROACH ─────────────────────────────── */}
-        <section className="bg-[#faf7fc] py-16 lg:py-20">
+        <section className="bg-white py-16 lg:py-20 border-t border-[#e5d9f0]">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
             <div className="mx-auto max-w-3xl text-center">
               <p className="text-xs font-black uppercase tracking-[0.18em] text-[#6B2D8B]">

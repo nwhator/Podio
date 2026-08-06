@@ -11,6 +11,7 @@ const navItems = [
   { label: "Programmes", href: "/programmes" },
   { label: "Pricing", href: "/pricing" },
   { label: "Books", href: "/books" },
+  { label: "Gallery", href: "/gallery" },
   { label: "FAQs", href: "/faqs" },
   { label: "Contact", href: "/contact" },
 ];

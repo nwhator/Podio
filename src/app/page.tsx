@@ -12,7 +12,8 @@ import {
 import Link from "next/link";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { faqs, features, programmes } from "@/lib/podio-content";
+import { TestimonialsCarousel } from "@/components/testimonials-carousel";
+import { faqs, features, programmes, testimonials } from "@/lib/podio-content";
 
 const heroImage =
   "https://media.base44.com/images/public/6a213dc397307c380a637125/812a0c1d8_generated_image.png";
@@ -301,6 +302,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ── TESTIMONIALS ───────────────────────────────────────── */}
+        <TestimonialsCarousel testimonials={testimonials} />
 
       </main>
       <SiteFooter />

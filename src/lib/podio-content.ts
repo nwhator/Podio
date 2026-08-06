@@ -172,7 +172,7 @@ export const books: BookProduct[] = [
     stripePriceId: process.env.STRIPE_PRICE_BOOK_SUPERPOWER || "price_1Tw0v8Q3GhEHrM2KtxIIa2AN",
     description:
       "My Voice Is A Superpower is a fun and interactive communication adventure designed to help children build confidence, express their ideas clearly, and develop strong public speaking skills. Through the exciting journey of Leo, Nova, Wizzy and Sparks, children learn storytelling, leadership, critical thinking, and the courage to use their voice. Includes an interactive workbook packed with practical activities, reflection exercises, and speaking challenges to reinforce every lesson.",
-    price: "£20",
+    price: "£25",
     image: "/My_voice_is_a_super_power.jpg",
     type: "physical",
   },
@@ -181,8 +181,45 @@ export const books: BookProduct[] = [
     stripePriceId: process.env.STRIPE_PRICE_BOOK_SUPERPOWER_TEEN || "price_1Tw0yKQ3GhEHrM2KSUGp4IoL",
     description:
       "Designed for teenagers preparing for school, university, and life beyond, My Voice Is A Superpower: Teen Edition equips young people with the confidence to communicate effectively, think critically, and speak with purpose. Through relatable stories, practical lessons, and real-world communication skills, teens learn how to lead conversations, present ideas with confidence, and become impactful communicators. Includes a companion workbook filled with guided exercises, speaking activities, and reflection tasks to help readers put every lesson into practice.",
-    price: "£20",
+    price: "£25",
     image: "/My_voice_is_a_super_power_teen_edition.jpg",
     type: "physical",
   },
 ];
+
+export const galleryImages = [
+  { src: "/gallery/DSC_3345.jpeg", alt: "Podio workshop activity" },
+  { src: "/gallery/DSC_3356.jpeg", alt: "Podio children speaking session" },
+  { src: "/gallery/DSC_3383.jpeg", alt: "Podio workshop learning group" },
+  { src: "/gallery/DSC_3390.jpeg", alt: "Podio student presenting with confidence" },
+  { src: "/gallery/DSC_3468.jpeg", alt: "Podio coaching session" },
+  { src: "/gallery/DSC_3563.jpeg", alt: "Podio interactive activity" },
+  { src: "/gallery/DSC_3587.jpeg", alt: "Podio children group discussion" },
+  { src: "/gallery/DSC_3619.jpeg", alt: "Podio speech training moment" },
+  { src: "/gallery/DSC_3673.jpeg", alt: "Podio public speaking presentation" },
+  { src: "/gallery/DSC_3695.jpeg", alt: "Podio workshop engagement" },
+  { src: "/gallery/DSC_3796.jpeg", alt: "Podio youth leadership moment" },
+  { src: "/gallery/DSC_3813.jpeg", alt: "Podio student speaking proudly" },
+  { src: "/gallery/DSC_3829.jpeg", alt: "Podio workshop smiles and learning" },
+  { src: "/gallery/DSC_3846.jpeg", alt: "Podio students engaged in learning" },
+  { src: "/gallery/DSC_3861.jpeg", alt: "Podio speech and confidence coaching" },
+  { src: "/gallery/DSC_3877.jpeg", alt: "Podio group workshop highlights" },
+  { src: "/gallery/DSC_3889.jpeg", alt: "Podio creative presentation exercise" },
+  { src: "/gallery/DSC_3903.jpeg", alt: "Podio team collaboration" },
+  { src: "/gallery/DSC_3914.jpeg", alt: "Podio expressive speaking activity" },
+  { src: "/gallery/DSC_3922.jpeg", alt: "Podio students celebrating progress" },
+  { src: "/gallery/DSC_3928.jpeg", alt: "Podio presentation stage" },
+  { src: "/gallery/D68887B2-7205-41EF-8593-BC3F441908F2.jpg", alt: "Podio event moment" },
+  { src: "/gallery/IMG_5987.PNG", alt: "Podio workshop showcase" },
+];
+
+export const testimonials = [
+  { src: "/testimonials/testimonial-1.png", alt: "Parent review 1" },
+  { src: "/testimonials/testimonial-2.png", alt: "Parent review 2" },
+  { src: "/testimonials/testimonial-3.png", alt: "Parent review 3" },
+  { src: "/testimonials/testimonial-4.png", alt: "Parent review 4" },
+  { src: "/testimonials/testimonial-5.png", alt: "Parent review 5" },
+  { src: "/testimonials/testimonial-6.png", alt: "Parent review 6" },
+  { src: "/testimonials/testimonial-7.png", alt: "Parent review 7" },
+  { src: "/testimonials/testimonial-8.png", alt: "Parent review 8" },
+];
