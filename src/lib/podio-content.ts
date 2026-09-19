@@ -222,4 +222,4 @@ export const testimonials = [
   { src: "/testimonials/testimonial-6.png", alt: "Parent review 6" },
   { src: "/testimonials/testimonial-7.png", alt: "Parent review 7" },
   { src: "/testimonials/testimonial-8.png", alt: "Parent review 8" },
-];
+];
