@@ -5,10 +5,16 @@ import Image from "next/image";
 import { Sparkles } from "lucide-react";
 
 export function FounderPhoto() {
+  const [isHovered, setIsHovered] = useState(false);
   const [isToggled, setIsToggled] = useState(false);
+
+  // If hovered OR toggled via click/tap, show founder_2
+  const showAlternate = isHovered || isToggled;
 
   return (
     <div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       onClick={() => setIsToggled((prev) => !prev)}
       role="button"
       tabIndex={0}
@@ -29,7 +35,7 @@ export function FounderPhoto() {
         priority
         sizes="(max-width: 768px) 100vw, 440px"
         className={`object-cover object-top transition-opacity duration-700 ease-in-out ${
-          isToggled ? "opacity-0" : "opacity-100 group-hover:opacity-0"
+          showAlternate ? "opacity-0" : "opacity-100"
         }`}
       />
 
@@ -40,7 +46,7 @@ export function FounderPhoto() {
         fill
         sizes="(max-width: 768px) 100vw, 440px"
         className={`object-cover object-top transition-opacity duration-700 ease-in-out ${
-          isToggled ? "opacity-100" : "opacity-0 group-hover:opacity-100"
+          showAlternate ? "opacity-100" : "opacity-0"
         }`}
       />
 

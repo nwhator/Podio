@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageHero } from "@/components/page-hero";
 import { GalleryGrid } from "@/components/gallery-grid";
-import { galleryImages } from "@/lib/podio-content";
+import { getGalleryFolders } from "@/lib/gallery-data";
 
 export const metadata: Metadata = {
   title: "Gallery | Podio",
@@ -11,7 +11,12 @@ export const metadata: Metadata = {
     "Explore photos and memorable moments from Podio workshops, speaking sessions, and confidence-building events across the UK.",
 };
 
+// Immediately re-scans public/gallery so newly added photos appear right away
+export const dynamic = "force-dynamic";
+
 export default function GalleryPage() {
+  const folders = getGalleryFolders();
+
   return (
     <>
       <SiteHeader />
@@ -24,7 +29,7 @@ export default function GalleryPage() {
 
         <section className="py-14 lg:py-20">
           <div className="mx-auto max-w-[1280px] px-5 lg:px-8">
-            <GalleryGrid images={galleryImages} />
+            <GalleryGrid folders={folders} />
           </div>
         </section>
       </main>

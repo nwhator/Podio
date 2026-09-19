@@ -2,16 +2,19 @@
 
 import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, X, Maximize2 } from "lucide-react";
+import { ChevronLeft, ChevronRight, X, Maximize2, Folder, Images } from "lucide-react";
+import { GalleryFolder } from "@/lib/gallery-data";
 
-interface GalleryItem {
-  src: string;
-  alt: string;
-}
-
-export function GalleryGrid({ images }: { images: GalleryItem[] }) {
+export function GalleryGrid({ folders }: { folders: GalleryFolder[] }) {
+  const [activeFolderId, setActiveFolderId] = useState<string>(
+    folders[0]?.id || "all"
+  );
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
   const [touchStart, setTouchStart] = useState<number | null>(null);
+
+  const activeFolder =
+    folders.find((f) => f.id === activeFolderId) || folders[0];
+  const activeImages = activeFolder?.images || [];
 
   const openLightbox = (index: number) => {
     setSelectedIndex(index);
@@ -29,15 +32,15 @@ export function GalleryGrid({ images }: { images: GalleryItem[] }) {
 
   const showPrev = useCallback(() => {
     setSelectedIndex((prev) =>
-      prev === null ? null : (prev - 1 + images.length) % images.length
+      prev === null ? null : (prev - 1 + activeImages.length) % activeImages.length
     );
-  }, [images.length]);
+  }, [activeImages.length]);
 
   const showNext = useCallback(() => {
     setSelectedIndex((prev) =>
-      prev === null ? null : (prev + 1) % images.length
+      prev === null ? null : (prev + 1) % activeImages.length
     );
-  }, [images.length]);
+  }, [activeImages.length]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -76,15 +79,87 @@ export function GalleryGrid({ images }: { images: GalleryItem[] }) {
     setTouchStart(null);
   };
 
+  if (!activeFolder || activeImages.length === 0) {
+    return (
+      <div className="rounded-2xl border border-dashed border-[#e5d9f0] bg-white p-12 text-center">
+        <Images className="mx-auto h-12 w-12 text-[#6B2D8B]/40" />
+        <p className="mt-4 text-lg font-bold text-[#07101f]">
+          No photos found in gallery
+        </p>
+        <p className="mt-1 text-sm text-[#526274]">
+          Add images into public/gallery/ to automatically display them here.
+        </p>
+      </div>
+    );
+  }
+
   return (
-    <>
+    <div className="space-y-8">
+      {/* Folder Selector Tabs (if more than 1 folder exists or single folder indicator) */}
+      <div className="flex flex-wrap items-center gap-3">
+        {folders.map((folder) => {
+          const isActive = folder.id === activeFolderId;
+          return (
+            <button
+              key={folder.id}
+              onClick={() => {
+                setActiveFolderId(folder.id);
+                setSelectedIndex(null);
+              }}
+              className={`inline-flex items-center gap-2.5 rounded-xl px-5 py-3 text-xs font-black uppercase tracking-[0.14em] transition-all duration-200 ${
+                isActive
+                  ? "bg-[#6B2D8B] text-white shadow-md"
+                  : "border border-[#e5d9f0] bg-white text-[#07101f] hover:border-[#6B2D8B] hover:text-[#6B2D8B]"
+              }`}
+            >
+              <Folder className={`h-4 w-4 ${isActive ? "text-[#ffbf47]" : "text-[#6B2D8B]"}`} />
+              <span>{folder.name}</span>
+              <span
+                className={`rounded-full px-2 py-0.5 text-[10px] font-extrabold ${
+                  isActive ? "bg-white/20 text-white" : "bg-[#f5edfb] text-[#6B2D8B]"
+                }`}
+              >
+                {folder.images.length}
+              </span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Active Folder Header Banner */}
+      <div className="rounded-2xl border border-[#e5d9f0] bg-white p-6 sm:p-8 shadow-sm">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <div className="flex items-center gap-2 text-xs font-black uppercase tracking-[0.18em] text-[#6B2D8B]">
+              <Folder className="h-4 w-4 text-[#ffbf47]" />
+              Event Album
+            </div>
+            <h2 className="mt-2 text-2xl sm:text-3xl font-black uppercase tracking-tight text-[#07101f]">
+              {activeFolder.name}
+            </h2>
+            {activeFolder.description && (
+              <p className="mt-2 max-w-2xl text-sm leading-6 text-[#526274]">
+                {activeFolder.description}
+              </p>
+            )}
+          </div>
+          <div className="shrink-0 self-start sm:self-center">
+            <span className="inline-flex items-center gap-1.5 rounded-full border border-[#e5d9f0] bg-[#faf7fc] px-3.5 py-1.5 text-xs font-bold text-[#07101f]">
+              <span className="h-2 w-2 rounded-full bg-[#6B2D8B]" />
+              {activeImages.length} Photos
+            </span>
+          </div>
+        </div>
+      </div>
+
+      {/* Image Grid */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 sm:gap-6">
-        {images.map((item, index) => (
+        {activeImages.map((item, index) => (
           <button
             key={item.src}
             type="button"
             onClick={() => openLightbox(index)}
-            aria-label={`View photo ${index + 1} full screen`}
+            aria-label={`View photo ${index + 1} of ${activeFolder.name} full screen`}
             className="group relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-[#e5d9f0] bg-[#f5edfb] text-left shadow-sm transition hover:shadow-md focus:outline-none focus:ring-2 focus:ring-[#6B2D8B]"
           >
             <Image
@@ -106,7 +181,7 @@ export function GalleryGrid({ images }: { images: GalleryItem[] }) {
       </div>
 
       {/* Fullscreen Lightbox Modal */}
-      {selectedIndex !== null && (
+      {selectedIndex !== null && activeImages[selectedIndex] && (
         <div
           role="dialog"
           aria-modal="true"
@@ -121,9 +196,14 @@ export function GalleryGrid({ images }: { images: GalleryItem[] }) {
             className="absolute inset-x-0 top-0 flex items-center justify-between p-4 text-white sm:p-6"
             onClick={(e) => e.stopPropagation()}
           >
-            <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-black tracking-widest text-[#ffbf47] uppercase">
-              {selectedIndex + 1} / {images.length}
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="rounded-full bg-white/15 px-3 py-1 text-xs font-black tracking-widest text-[#ffbf47] uppercase">
+                {selectedIndex + 1} / {activeImages.length}
+              </span>
+              <span className="hidden sm:inline text-xs font-semibold text-white/80">
+                {activeFolder.name}
+              </span>
+            </div>
             <button
               onClick={closeLightbox}
               className="flex h-10 w-10 items-center justify-center rounded-full bg-white/15 text-white transition hover:bg-white/30"
@@ -163,7 +243,7 @@ export function GalleryGrid({ images }: { images: GalleryItem[] }) {
             onClick={(e) => e.stopPropagation()}
           >
             <Image
-              src={images[selectedIndex].src}
+              src={activeImages[selectedIndex].src}
               alt=""
               fill
               priority
@@ -173,6 +253,6 @@ export function GalleryGrid({ images }: { images: GalleryItem[] }) {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
