@@ -36,3 +36,12 @@ textarea,
 button {
   font: inherit;
 }
+
+@media print {
+  /* Prevent exporting or printing preview flipbook pages as PDF */
+  [data-no-print="true"],
+  .flipbook-preview {
+    display: none !important;
+  }
+}
+

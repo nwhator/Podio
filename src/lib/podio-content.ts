@@ -1,10 +1,14 @@
 export interface BookProduct {
+  id: string;
   name: string;
   stripePriceId: string;
   description: string;
   price: string;
   image: string;
   type: "physical" | "digital" | "both";
+  previewSlug: string;
+  previewPages: string[];
+  totalPages: number;
 }
 
 export const features = [
@@ -168,6 +172,7 @@ export const safeguarding = [
 
 export const books: BookProduct[] = [
   {
+    id: "podio-kids",
     name: "My Voice Is A Superpower",
     stripePriceId: process.env.STRIPE_PRICE_BOOK_SUPERPOWER || "price_1Tw0v8Q3GhEHrM2KtxIIa2AN",
     description:
@@ -175,8 +180,19 @@ export const books: BookProduct[] = [
     price: "£25",
     image: "/My_voice_is_a_super_power.jpg",
     type: "physical",
+    previewSlug: "podio-kids",
+    totalPages: 6,
+    previewPages: [
+      "/previews/podio-kids/page-1.webp",
+      "/previews/podio-kids/page-2.webp",
+      "/previews/podio-kids/page-3.webp",
+      "/previews/podio-kids/page-4.webp",
+      "/previews/podio-kids/page-5.webp",
+      "/previews/podio-kids/page-6.webp",
+    ],
   },
   {
+    id: "podio-adults",
     name: "My Voice Is A Superpower: Teen Edition",
     stripePriceId: process.env.STRIPE_PRICE_BOOK_SUPERPOWER_TEEN || "price_1Tw0yKQ3GhEHrM2KSUGp4IoL",
     description:
@@ -184,6 +200,14 @@ export const books: BookProduct[] = [
     price: "£25",
     image: "/My_voice_is_a_super_power_teen_edition.jpg",
     type: "physical",
+    previewSlug: "podio-adults",
+    totalPages: 4,
+    previewPages: [
+      "/previews/podio-adults/page-1.webp",
+      "/previews/podio-adults/page-2.webp",
+      "/previews/podio-adults/page-3.webp",
+      "/previews/podio-adults/page-4.webp",
+    ],
   },
 ];
 
