@@ -35,7 +35,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 -z-10 bg-[linear-gradient(105deg,rgba(40,8,65,0.72)_0%,rgba(40,8,65,0.38)_45%,rgba(40,8,65,0.04)_100%)]" />
 
-          <div className="mx-auto grid min-h-[calc(100svh-65px)] max-w-[1280px] content-between px-5 py-4 lg:h-[calc(100svh-65px)] lg:max-h-[640px] lg:min-h-[540px] lg:px-8">
+          <div className="mx-auto flex min-h-[calc(100svh-65px)] max-w-[1280px] flex-col justify-between gap-8 px-5 py-6 sm:py-8 lg:px-8 lg:py-10">
             <div className="flex flex-wrap items-center justify-between gap-3 pt-2">
               <p className="inline-flex items-center gap-2 rounded-md border border-white/25 bg-white/12 px-3 py-2 text-xs font-black uppercase tracking-[0.14em] text-[#f5e8ff]">
                 <MicVocal aria-hidden className="h-4 w-4" />
@@ -47,14 +47,14 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="py-6 sm:py-8">
-              <h1 className="max-w-4xl text-[clamp(2.4rem,6.5vw,5.8rem)] font-black uppercase leading-[0.92] tracking-[-0.01em]">
+            <div className="my-auto py-4 sm:py-6">
+              <h1 className="max-w-4xl text-[clamp(2.2rem,5.5vw,5.4rem)] font-black uppercase leading-[0.94] tracking-[-0.01em]">
                 Helping Children Find Their Voice
                 <span className="block text-[#ffbf47]">
                   Before Fear Finds Them.
                 </span>
               </h1>
-              <div className="mt-6 grid gap-4 lg:grid-cols-[0.65fr_0.35fr] lg:items-end">
+              <div className="mt-6 grid gap-6 lg:grid-cols-[0.65fr_0.35fr] lg:items-end">
                 <p className="max-w-3xl text-base font-medium leading-7 text-[#f0e4ff] sm:text-lg">
                   Podio helps children become confident communicators,
                   courageous thinkers, and future leaders through live coaching
@@ -78,7 +78,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="grid gap-3 border-t border-white/20 py-3 sm:grid-cols-3">
+            <div className="grid gap-4 border-t border-white/20 pt-4 pb-2 sm:grid-cols-3">
               {[
                 ["12", "weeks per programme"],
                 ["6–8", "children per small group"],
