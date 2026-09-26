@@ -1,0 +1,111 @@
+{
+  "id": "youth-communication-day",
+  "slug": "youth-communication-day",
+  "title": "Youth Communication Day",
+  "shortTitle": "Communication Day 2026",
+  "headline": "Where Young Voices Take the Stage.",
+  "description": "An intensive one-day masterclass bringing together aspiring young leaders to master stage presence, impromptu debate, and courageous storytelling.",
+  "heroImage": "/gallery/DSC_3383.jpeg",
+  "status": "completed",
+  "date": "2026-02-14",
+  "startTime": "10:00 AM",
+  "endTime": "04:00 PM",
+  "timezone": "GMT (UTC+0)",
+  "venue": "Banqueting Hall, Greenwich",
+  "address": "Cutty Sark Gardens, Greenwich",
+  "city": "London",
+  "country": "United Kingdom",
+  "attendanceType": "in-person",
+  "ageRange": "11–18",
+  "duration": "6 Hours",
+  "capacity": 65,
+  "isFree": true,
+  "contactEmail": "PodioForKids@gmail.com",
+  "contactPhone": "+44 7498 502571",
+  "about": {
+    "whatIsIt": "Youth Communication Day brought together 65 young speakers for a high-energy day of public speaking exercises, structured storytelling, and friendly debate tournaments.",
+    "whyCreated": "To provide a vibrant, supportive platform where students from diverse backgrounds can practice real-world speaking without fear.",
+    "problemAddressed": "Adolescent fear of judgment and hesitation when speaking before unfamiliar audiences.",
+    "whoIsItFor": "Middle school and secondary school students seeking speaking confidence.",
+    "whatToGain": "Mastery of impromptu speech structures, vocal variety, and stage movement."
+  },
+  "learningOutcomes": [
+    {
+      "title": "Impromptu Speech Frameworks",
+      "description": "How to think on your feet and give a clear 2-minute response to surprise prompts."
+    },
+    {
+      "title": "Vocal Clarity & Projection",
+      "description": "Speaking loudly and crisply without straining the vocal cords."
+    },
+    {
+      "title": "Story Architecture",
+      "description": "Hooking listeners within the first 15 seconds using engaging narrative openings."
+    }
+  ],
+  "audience": {
+    "ageRange": "11–18",
+    "target": ["Secondary School Students", "Youth Debate Clubs", "Aspiring Student Council Leaders"],
+    "description": "Participants from 14 London schools joined this hands-on workshop."
+  },
+  "schedule": [
+    { "time": "10:00 AM", "title": "Welcome & Confidence Warmups", "activityType": "interactive" },
+    { "time": "11:00 AM", "title": "The 3 Pillars of Great Oratory", "activityType": "workshop" },
+    { "time": "12:30 PM", "title": "Lunch & Group Mentoring", "activityType": "break" },
+    { "time": "01:30 PM", "title": "Live Debate Rounds", "activityType": "workshop" },
+    { "time": "03:15 PM", "title": "Grand Showcase & Certificate Awards", "activityType": "showcase" }
+  ],
+  "speakers": [
+    {
+      "name": "Dr. Ronke Adeleke",
+      "role": "Founder, Podio",
+      "bio": "Speech Pathologist and child communication expert.",
+      "image": "/founder/founder_1.jpg"
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I view the session recordings or photos?",
+      "answer": "Yes! Selected highlights and photo galleries from the event are available below in the event recap section."
+    },
+    {
+      "question": "When is the next edition taking place?",
+      "answer": "Our upcoming seminar is Speak Up in June 2026. Check the Upcoming Events tab on our events page to register!"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "My daughter spoke in front of 60 people without notes. It was a transformative milestone for her self-esteem!",
+      "name": "Sarah Jenkins",
+      "role": "Parent of 14-year-old student"
+    },
+    {
+      "quote": "I used to hate standing in front of the class. After Youth Communication Day, I volunteered to present our school science project!",
+      "name": "Kofi A.",
+      "role": "Year 10 Student"
+    }
+  ],
+  "gallery": [
+    { "src": "/gallery/DSC_3383.jpeg", "alt": "Workshop learning group in Greenwich" },
+    { "src": "/gallery/DSC_3390.jpeg", "alt": "Student presenting with confidence" },
+    { "src": "/gallery/DSC_3468.jpeg", "alt": "Podio coaching session" },
+    { "src": "/gallery/DSC_3563.jpeg", "alt": "Interactive speaking exercises" },
+    { "src": "/gallery/DSC_3673.jpeg", "alt": "Student stage showcase" },
+    { "src": "/gallery/DSC_3813.jpeg", "alt": "Student proud moment" }
+  ],
+  "recap": {
+    "summary": "Youth Communication Day 2026 was a roaring success! 65 brilliant young people gathered to break through speaking barriers, master stage confidence, and celebrate the power of their voices.",
+    "participantCount": 65,
+    "highlights": [
+      "65 students aged 11–18 completed the 6-hour intensive masterclass.",
+      "100% of participants took the podium and delivered an impromptu 90-second speech.",
+      "4 friendly debate tournament rounds judged by seasoned public speaking coaches.",
+      "Over 120 parents and guests cheered during the concluding Grand Showcase."
+    ],
+    "keyLessons": [
+      "Confidence is not the absence of nervousness; it is the courage to speak while your heart beats fast.",
+      "A great speech is 20% content and 80% genuine connection, eye contact, and emotional sincerity.",
+      "Pause is power: taking a calm breath before answering commands far more respect than rushing."
+    ]
+  }
+}

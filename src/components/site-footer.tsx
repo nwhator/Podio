@@ -41,6 +41,7 @@ export function SiteFooter() {
             <div className="mt-4 grid gap-2 text-sm font-bold">
               <Link href="/about" className="transition hover:text-[#6B2D8B]">About</Link>
               <Link href="/programmes" className="transition hover:text-[#6B2D8B]">Programmes</Link>
+              <Link href="/events" className="transition hover:text-[#6B2D8B]">Events & Seminars</Link>
               <Link href="/pricing" className="transition hover:text-[#6B2D8B]">Pricing</Link>
               <Link href="/books" className="transition hover:text-[#6B2D8B]">Books</Link>
               <Link href="/gallery" className="transition hover:text-[#6B2D8B]">Gallery</Link>

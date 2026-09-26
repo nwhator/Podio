@@ -1,0 +1,51 @@
+[
+  {
+    "time": "09:30 AM",
+    "title": "Registration, Welcome & Morning Warm-Up",
+    "description": "Participant check-in, workbook collection, and an ice-breaking vocal exercise to set a relaxed tone.",
+    "activityType": "interactive"
+  },
+  {
+    "time": "10:00 AM",
+    "title": "Keynote: Your Voice Is Your Superpower",
+    "description": "Discovering why speaking is a muscle, how fear works in the brain, and how to turn adrenaline into energy.",
+    "speaker": "Lead Communication Coach",
+    "activityType": "session"
+  },
+  {
+    "time": "10:45 AM",
+    "title": "Masterclass 1: Vocal Dynamics & Breathing Techniques",
+    "description": "Diaphragmatic breathing, tone modulation, pacing, and eliminating filler words ('um', 'like', 'you know').",
+    "activityType": "workshop"
+  },
+  {
+    "time": "11:45 AM",
+    "title": "Breakout Challenge: The 60-Second Elevator Pitch",
+    "description": "Hands-on small group activity where participants structure and present a quick passion topic with live peer feedback.",
+    "activityType": "interactive"
+  },
+  {
+    "time": "12:45 PM",
+    "title": "Networking Lunch & Informal Mentorship",
+    "description": "Healthy refreshments, peer discussions, and coach Q&A in a warm community environment.",
+    "activityType": "break"
+  },
+  {
+    "time": "01:30 PM",
+    "title": "Masterclass 2: The Art of Storytelling & Persuasion",
+    "description": "How to structure a message with a beginning, middle, and inspiring call to action that resonates.",
+    "activityType": "workshop"
+  },
+  {
+    "time": "02:15 PM",
+    "title": "Stage Showcase: Speak Up Live Spotlight",
+    "description": "Volunteers take the podium to deliver their polished speeches in front of a cheering, supportive audience.",
+    "activityType": "showcase"
+  },
+  {
+    "time": "03:15 PM",
+    "title": "Celebration, Certificate Award & Closing Remarks",
+    "description": "Certificate presentation, group photos, takeaways, and next steps for continuing the speaking journey.",
+    "activityType": "session"
+  }
+]

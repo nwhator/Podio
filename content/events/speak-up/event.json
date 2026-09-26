@@ -1,0 +1,70 @@
+{
+  "id": "speak-up",
+  "slug": "speak-up",
+  "title": "Speak Up",
+  "shortTitle": "Speak Up 2026",
+  "headline": "Find Your Voice. Own Your Words.",
+  "description": "A high-impact confidence and communication seminar designed to help young people express themselves clearly, communicate confidently, and become stronger speakers.",
+  "heroImage": "/gallery/DSC_3345.jpeg",
+  "status": "registration-open",
+  "date": "2026-06-20",
+  "startTime": "09:30 AM",
+  "endTime": "03:30 PM",
+  "timezone": "WAT (UTC+1)",
+  "venue": "The Zone Centre, Gbagada",
+  "address": "Plot 9, Gbagada Industrial Scheme, Beside UPS",
+  "city": "Lagos",
+  "country": "Nigeria",
+  "attendanceType": "in-person",
+  "ageRange": "10–24",
+  "duration": "6 Hours (Interactive & Workshop Based)",
+  "registrationDeadline": "June 17, 2026",
+  "capacity": 80,
+  "isFree": true,
+  "contactEmail": "PodioForKids@gmail.com",
+  "contactPhone": "+44 7498 502571",
+  "dressCode": "Smart Casual / Comfortable",
+  "about": {
+    "whatIsIt": "Speak Up is Podio's flagship in-person seminar and masterclass created to give young people the tools, courage, and platform to speak confidently without fear or self-doubt.",
+    "whyCreated": "Too many bright young minds stay silent in classrooms, interviews, and social spaces—not because they lack ideas, but because fear finds them before their voice does. Speak Up exists to change that story by building lifelong habits of self-expression.",
+    "problemAddressed": "Stage fright, low speaking confidence, fear of judgment, and unstructured presentation habits that hold back youth in academic and leadership journeys.",
+    "whoIsItFor": "Children, teenagers, and young adults aged 10–24 who want to conquer public speaking fear, present ideas clearly, and build magnetic leadership presence.",
+    "whatToGain": "Actionable speaking blueprints, individualized coach feedback, live interactive speaking challenges, peer support, and a certificate of completion."
+  },
+  "learningOutcomes": [
+    {
+      "title": "Public Speaking Mastery",
+      "description": "Conquer stage fright, project your voice with authority, and command audience attention naturally."
+    },
+    {
+      "title": "Clear Self-Expression",
+      "description": "Articulate your thoughts concisely without stumbling, second-guessing, or feeling overwhelmed."
+    },
+    {
+      "title": "Structured Thinking",
+      "description": "Organize ideas on the spot using simple frameworks that keep your presentations logical and persuasive."
+    },
+    {
+      "title": "Captivating Storytelling",
+      "description": "Learn how to use real stories, emotion, and metaphors to make any speech or pitch unforgettable."
+    },
+    {
+      "title": "Body Language & Presence",
+      "description": "Master open posture, intentional eye contact, and purposeful gestures that exude calm confidence."
+    },
+    {
+      "title": "Debate & Persuasion",
+      "description": "Deliver constructive counterarguments and defend your perspectives respectfully in group discussions."
+    }
+  ],
+  "audience": {
+    "ageRange": "10–24",
+    "target": [
+      "Children discovering confidence (Ages 10–12)",
+      "Teenagers preparing for exams & interviews (Ages 13–17)",
+      "Young adults & university students (Ages 18–24)",
+      "Aspiring youth leaders & public speakers"
+    ],
+    "description": "Breakout sessions are split into peer age groups to ensure coaching is tailored to developmental stages and comfort levels."
+  }
+}

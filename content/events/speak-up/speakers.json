@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Dr. Ronke Adeleke",
+    "role": "Founder, Podio & Youth Voice Advocate",
+    "bio": "Certified executive speech pathologist and child communication strategist with over 15 years empowering young minds across the UK and West Africa to speak with clarity and emotional intelligence.",
+    "image": "/founder/founder_1.jpg",
+    "expertise": ["Speech Articulation", "Child Psychology", "Leadership Coaching"]
+  },
+  {
+    "name": "Femi Babatunde",
+    "role": "Debate Coach & Broadcast Journalist",
+    "bio": "Former national debate champion and seasoned broadcast trainer specializing in competitive public speaking, impromptu delivery, and critical argumentative framing for adolescents.",
+    "image": "/founder/founder_2.jpg",
+    "expertise": ["Impromptu Speaking", "Debate Strategy", "Media Presence"]
+  },
+  {
+    "name": "Amaka Nwachukwu",
+    "role": "Youth Storytelling Specialist",
+    "bio": "TEDx speaker and narrative strategist who trains students in personal branding, interview poise, and creative oral storytelling.",
+    "image": "/founder/founder_1.jpg",
+    "expertise": ["Storytelling", "Interview Poise", "Creative Expression"]
+  }
+]

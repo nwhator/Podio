@@ -1,12 +1,14 @@
 import { MetadataRoute } from "next";
+import { getAllEvents } from "@/lib/events/service";
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://podioforkids.com";
 
-  return [
+  const staticRoutes: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/programmes`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/events`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/pricing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/books`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/gallery`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
@@ -16,4 +18,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/safeguarding`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/consent`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
   ];
+
+  try {
+    const events = await getAllEvents(false);
+    const eventRoutes: MetadataRoute.Sitemap = events.map((event) => ({
+      url: `${baseUrl}/events/${event.slug}`,
+      lastModified: new Date(),
+      changeFrequency: event.status === "completed" ? "monthly" : "weekly",
+      priority: event.status === "completed" ? 0.7 : 0.9,
+    }));
+    return [...staticRoutes, ...eventRoutes];
+  } catch {
+    return staticRoutes;
+  }
 }
