@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { ConfirmationView } from "./confirmation-view";
 import { getEventBySlug } from "@/lib/events/service";
+import { EVENTS_ENABLED } from "@/lib/events/config";
 
 interface ConfirmationPageProps {
   params: Promise<{ slug: string }>;
@@ -20,6 +21,11 @@ export default async function ConfirmationPage({
   searchParams,
 }: ConfirmationPageProps) {
   const { slug } = await params;
+
+  if (!EVENTS_ENABLED) {
+    notFound();
+  }
+
   const search = await searchParams;
   const event = await getEventBySlug(slug, true);
 

@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { getAllEvents } from "@/lib/events/service";
+import { EVENTS_ENABLED } from "@/lib/events/config";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://podioforkids.com";
@@ -8,7 +9,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: baseUrl, lastModified: new Date(), changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/programmes`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
-    { url: `${baseUrl}/events`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.9 },
+    ...(EVENTS_ENABLED
+      ? [{ url: `${baseUrl}/events`, lastModified: new Date(), changeFrequency: "weekly" as const, priority: 0.9 }]
+      : []),
     { url: `${baseUrl}/pricing`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/books`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/gallery`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.8 },
@@ -18,6 +21,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/safeguarding`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
     { url: `${baseUrl}/consent`, lastModified: new Date(), changeFrequency: "yearly", priority: 0.3 },
   ];
+
+  if (!EVENTS_ENABLED) {
+    return staticRoutes;
+  }
 
   try {
     const events = await getAllEvents(false);

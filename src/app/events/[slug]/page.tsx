@@ -15,18 +15,23 @@ import { EventTestimonials } from "@/components/events/event-testimonials";
 import { EventFAQSection } from "@/components/events/event-faq";
 import { EventStickyBar } from "@/components/events/event-sticky-bar";
 import { getEventBySlug, getAllEventSlugs } from "@/lib/events/service";
+import { EVENTS_ENABLED } from "@/lib/events/config";
 
 interface EventPageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
+  if (!EVENTS_ENABLED) return [];
   const slugs = await getAllEventSlugs();
   return slugs.map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: EventPageProps): Promise<Metadata> {
   const { slug } = await params;
+  if (!EVENTS_ENABLED) {
+    return { title: "Event Not Found | Podio" };
+  }
   const event = await getEventBySlug(slug, false);
 
   if (!event) {
@@ -73,6 +78,11 @@ export async function generateMetadata({ params }: EventPageProps): Promise<Meta
 
 export default async function EventDetailPage({ params }: EventPageProps) {
   const { slug } = await params;
+
+  if (!EVENTS_ENABLED) {
+    notFound();
+  }
+
   const event = await getEventBySlug(slug, false);
 
   if (!event) {

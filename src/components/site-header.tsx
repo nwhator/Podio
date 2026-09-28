@@ -5,11 +5,12 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Menu, X } from "lucide-react";
+import { EVENTS_ENABLED } from "@/lib/events/config";
 
 const navItems = [
   { label: "About", href: "/about" },
   { label: "Programmes", href: "/programmes" },
-  { label: "Events", href: "/events" },
+  ...(EVENTS_ENABLED ? [{ label: "Events", href: "/events" }] : []),
   { label: "Pricing", href: "/pricing" },
   { label: "Books", href: "/books" },
   { label: "Gallery", href: "/gallery" },

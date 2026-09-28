@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { PageHero } from "@/components/page-hero";
 import { EventCard } from "@/components/events/event-card";
 import { getUpcomingEvents, getPastEvents } from "@/lib/events/service";
+import { EVENTS_ENABLED } from "@/lib/events/config";
 import { Calendar, Sparkles, Award, ShieldCheck, Users } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -13,6 +15,10 @@ export const metadata: Metadata = {
 };
 
 export default async function EventsPage() {
+  if (!EVENTS_ENABLED) {
+    notFound();
+  }
+
   const upcomingEvents = await getUpcomingEvents();
   const pastEvents = await getPastEvents();
 

@@ -5,6 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { RegisterForm } from "./register-form";
 import { getEventBySlug } from "@/lib/events/service";
+import { EVENTS_ENABLED } from "@/lib/events/config";
 import { Calendar, Clock, MapPin, ShieldCheck, ArrowLeft } from "lucide-react";
 
 interface RegisterPageProps {
@@ -15,6 +16,9 @@ export async function generateMetadata({
   params,
 }: RegisterPageProps): Promise<Metadata> {
   const { slug } = await params;
+  if (!EVENTS_ENABLED) {
+    return { title: "Register | Podio" };
+  }
   const event = await getEventBySlug(slug, false);
 
   if (!event) {
@@ -29,6 +33,11 @@ export async function generateMetadata({
 
 export default async function RegisterPage({ params }: RegisterPageProps) {
   const { slug } = await params;
+
+  if (!EVENTS_ENABLED) {
+    notFound();
+  }
+
   const event = await getEventBySlug(slug, false);
 
   if (!event) {
